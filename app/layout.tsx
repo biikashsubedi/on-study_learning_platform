@@ -1,9 +1,7 @@
-// import './globals.css';
 import Head from './layouts/head';
 import Loader from './layouts/loader';
 import Header from './layouts/header';
 import Script from './layouts/script';
-import Slider from './home/slider';
 import Footer from './layouts/footer';
 import ScrollTop from './layouts/scroll-top';
 
@@ -20,16 +18,18 @@ export default function RootLayout({children}: Props) {
     return (
         <>
             <html lang="en" className="no-touch">
+
             <Head/>
             <body className="light-theme">
             <Loader/>
             <Header/>
-            <Slider/>
 
+            {children}
 
             <Footer/>
             <ScrollTop/>
             <Script/>
+
             </body>
             </html>
         </>
