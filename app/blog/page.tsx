@@ -1,6 +1,19 @@
 import Link from "next/link"
+const url = 'https://jsonplaceholder.typicode.com/posts'
 
-export default function Home() {
+interface DummyAPI {
+    id: number,
+    title: string,
+    body: string,
+}
+
+async function ApiCall() {
+    const response = await fetch(url)
+    return await response.json()
+}
+
+export default async function Home() {
+    const data=await ApiCall()
     return (
         <>
 
@@ -12,10 +25,10 @@ export default function Home() {
                             <h2 className="section__title text-white">Hamro Blog</h2>
                         </div>
                         <ul className="generic-list-item generic-list-item-white generic-list-item-arrow d-flex flex-wrap align-items-center">
-                            <li><a
-                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/index.html">Home</a>
+                            <li><Link
+                                href="/">Home</Link>
                             </li>
-                            <li>Blog</li>
+                            <li><Link href="/blog"> Blog</Link> </li>
                             <li>Aakash ko Blog</li>
                         </ul>
                     </div>
@@ -29,14 +42,15 @@ export default function Home() {
                     <div className="row">
                         <div className="col-lg-8 mb-5">
                             <div className="row">
-                                <div className="col-lg-6">
+                                {data.slice(0,10).map((item: DummyAPI, index: number) => (
+                                <div key={item.id} className="col-lg-6">
                                     <div className="card card-item">
                                         <div className="card-image">
-                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html"
+                                            <Link href={`/blog/${encodeURIComponent(item.title)}`}
                                                className="d-block">
                                                 <img className="card-img-top lazy"
                                                      src="/assets/home/images/img8.jpg" alt="Card image cap"/>
-                                            </a>
+                                            </Link>
                                             <div className="course-badge-labels">
                                                 <div className="course-badge">Jan 24, 2020</div>
                                             </div>
@@ -44,37 +58,36 @@ export default function Home() {
 
                                         <div className="card-body">
                                             <h5 className="card-title"><a
-                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html">Sales
-                                                Training: Practical Techniques</a></h5>
+                                                href="/blog">{item.title}</a></h5>
                                             <ul className="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center flex-wrap fs-14 pt-2">
                                                 <li className="d-flex align-items-center">By<a
-                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#">TechyDevs</a>
+                                                    href={`/blog/${encodeURIComponent(item.title)}`}>TechyDevs</a>
                                                 </li>
                                                 <li className="d-flex align-items-center"><a
-                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#">4
+                                                    href={`/blog/${encodeURIComponent(item.title)}`}>4
                                                     Comments</a></li>
                                                 <li className="d-flex align-items-center"><a
-                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#">130
+                                                    href={`/blog/${encodeURIComponent(item.title)}`}>130
                                                     Likes</a></li>
                                             </ul>
                                             <div className="d-flex justify-content-between align-items-center pt-3">
-                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html"
+                                                <Link href={`/blog/${encodeURIComponent(item.title)}`}
                                                    className="btn theme-btn theme-btn-sm theme-btn-white">Read More <i
-                                                    className="la la-arrow-right icon ml-1"></i></a>
+                                                    className="la la-arrow-right icon ml-1"></i></Link>
                                                 <div className="share-wrap">
                                                     <ul className="social-icons social-icons-styled">
-                                                        <li className="mr-0"><a
-                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#"
+                                                        <li className="mr-0"><Link
+                                                            href={`/blog/${encodeURIComponent(item.title)}`}
                                                             className="facebook-bg"><i
-                                                            className="la la-facebook"></i></a>
+                                                            className="la la-facebook"></i></Link>
                                                         </li>
-                                                        <li className="mr-0"><a
-                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#"
-                                                            className="twitter-bg"><i className="la la-twitter"></i></a>
+                                                        <li className="mr-0"><Link
+                                                            href={`/blog/${encodeURIComponent(item.title)}`}
+                                                            className="twitter-bg"><i className="la la-twitter"></i></Link>
                                                         </li>
-                                                        <li className="mr-0"><a
-                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#"
-                                                            className="instagram-bg"><i className="la la-instagram"></i></a>
+                                                        <li className="mr-0"><Link
+                                                            href={`/blog/${encodeURIComponent(item.title)}`}
+                                                            className="instagram-bg"><i className="la la-instagram"></i></Link>
                                                         </li>
                                                     </ul>
                                                     <div
@@ -89,125 +102,9 @@ export default function Home() {
 
                                 </div>
 
-                                <div className="col-lg-6">
-                                    <div className="card card-item">
-                                        <div className="card-image">
-                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html"
-                                               className="d-block">
-                                                <img className="card-img-top lazy"
-                                                     src="/assets/home/images/img8.jpg" alt="Card image cap"/>
-                                            </a>
-                                            <div className="course-badge-labels">
-                                                <div className="course-badge">Jan 24, 2020</div>
-                                            </div>
-                                        </div>
+                                ))}
 
-                                        <div className="card-body">
-                                            <h5 className="card-title"><a
-                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html">Ultimate
-                                                Photoshop Training: From Beginner</a></h5>
-                                            <ul className="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center flex-wrap fs-14 pt-2">
-                                                <li className="d-flex align-items-center">By<a
-                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#">TechyDevs</a>
-                                                </li>
-                                                <li className="d-flex align-items-center"><a
-                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#">4
-                                                    Comments</a></li>
-                                                <li className="d-flex align-items-center"><a
-                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#">130
-                                                    Likes</a></li>
-                                            </ul>
-                                            <div className="d-flex justify-content-between align-items-center pt-3">
-                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html"
-                                                   className="btn theme-btn theme-btn-sm theme-btn-white">Read More <i
-                                                    className="la la-arrow-right icon ml-1"></i></a>
-                                                <div className="share-wrap">
-                                                    <ul className="social-icons social-icons-styled">
-                                                        <li className="mr-0"><a
-                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#"
-                                                            className="facebook-bg"><i
-                                                            className="la la-facebook"></i></a>
-                                                        </li>
-                                                        <li className="mr-0"><a
-                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#"
-                                                            className="twitter-bg"><i className="la la-twitter"></i></a>
-                                                        </li>
-                                                        <li className="mr-0"><a
-                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#"
-                                                            className="instagram-bg"><i className="la la-instagram"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                    <div
-                                                        className="icon-element icon-element-sm shadow-sm cursor-pointer share-toggle"
-                                                        title="Toggle to expand social icons"><i
-                                                        className="la la-share-alt"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                    </div>
-
-                                </div>
-
-                                <div className="col-lg-6">
-                                    <div className="card card-item">
-                                        <div className="card-image">
-                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html"
-                                               className="d-block">
-                                                <img className="card-img-top lazy"
-                                                     src="/assets/home/images/img8.jpg" alt="Card image cap"/>
-                                            </a>
-                                            <div className="course-badge-labels">
-                                                <div className="course-badge">Jan 24, 2020</div>
-                                            </div>
-                                        </div>
-
-                                        <div className="card-body">
-                                            <h5 className="card-title"><a
-                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html">Sales
-                                                Training: Practical Techniques</a></h5>
-                                            <ul className="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center flex-wrap fs-14 pt-2">
-                                                <li className="d-flex align-items-center">By<a
-                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#">TechyDevs</a>
-                                                </li>
-                                                <li className="d-flex align-items-center"><a
-                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#">4
-                                                    Comments</a></li>
-                                                <li className="d-flex align-items-center"><a
-                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#">130
-                                                    Likes</a></li>
-                                            </ul>
-                                            <div className="d-flex justify-content-between align-items-center pt-3">
-                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html"
-                                                   className="btn theme-btn theme-btn-sm theme-btn-white">Read More <i
-                                                    className="la la-arrow-right icon ml-1"></i></a>
-                                                <div className="share-wrap">
-                                                    <ul className="social-icons social-icons-styled">
-                                                        <li className="mr-0"><a
-                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#"
-                                                            className="facebook-bg"><i
-                                                            className="la la-facebook"></i></a>
-                                                        </li>
-                                                        <li className="mr-0"><a
-                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#"
-                                                            className="twitter-bg"><i className="la la-twitter"></i></a>
-                                                        </li>
-                                                        <li className="mr-0"><a
-                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#"
-                                                            className="instagram-bg"><i className="la la-instagram"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                    <div
-                                                        className="icon-element icon-element-sm shadow-sm cursor-pointer share-toggle"
-                                                        title="Toggle to expand social icons"><i
-                                                        className="la la-share-alt"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
 
 
                             </div>

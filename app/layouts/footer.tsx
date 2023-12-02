@@ -85,7 +85,7 @@ export default function Index() {
                         <div className="row align-items-center">
                             <div className="col-lg-6">
                                 <p className="copy-desc">© 2023 On-Study. All Rights Reserved. by <a
-                                    href="#">NPLearnt</a></p>
+                                    href="#">On-Study</a></p>
                             </div>
                             <div className="col-lg-6">
                                 <div className="d-flex flex-wrap align-items-center justify-content-end">
