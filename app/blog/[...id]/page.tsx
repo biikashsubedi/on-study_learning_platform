@@ -5,6 +5,1748 @@ interface HomePros {
 
 export default function Home({params}: HomePros) {
     return (
-        <h1>This is blog  {params.id}</h1>
+        <>
+            <header className="header-menu-area bg-white">
+                <div className="header-top pr-150px pl-150px border-bottom border-bottom-gray py-1">
+                    <div className="container-fluid">
+                        <div className="row align-items-center">
+                            <div className="col-lg-6">
+                                <div className="header-widget">
+                                    <ul className="generic-list-item d-flex flex-wrap align-items-center fs-14">
+                                        <li className="d-flex align-items-center pr-3 mr-3 border-right border-right-gray">
+                                            <i className="la la-phone mr-1"></i><a href="tel:00123456789"> (00) 123 456
+                                            789</a></li>
+                                        <li className="d-flex align-items-center"><i
+                                            className="la la-envelope-o mr-1"></i><a
+                                            href="mailto:contact@aduca.com"> contact@aduca.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="header-widget d-flex flex-wrap align-items-center justify-content-end">
+                                    <div className="theme-picker d-flex align-items-center">
+                                        <button className="theme-picker-btn dark-mode-btn" title="Dark mode">
+                                            <svg id="moon" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"
+                                                 stroke-linejoin="round">
+                                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                            </svg>
+                                        </button>
+                                        <button className="theme-picker-btn light-mode-btn" title="Light mode">
+                                            <svg id="sun" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"
+                                                 stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="5"></circle>
+                                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul className="generic-list-item d-flex flex-wrap align-items-center fs-14 border-left border-left-gray pl-3 ml-3">
+                                        <li className="d-flex align-items-center pr-3 mr-3 border-right border-right-gray">
+                                            <i className="la la-sign-in mr-1"></i><a
+                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/login.html"> Login</a>
+                                        </li>
+                                        <li className="d-flex align-items-center"><i className="la la-user mr-1"></i><a
+                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/sign-up.html"> Register</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="header-menu-content pr-150px pl-150px bg-white">
+                    <div className="container-fluid">
+                        <div className="main-menu-content">
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"
+                               className="down-button"><i className="la la-angle-down"></i></a>
+                            <div className="row align-items-center">
+                                <div className="col-lg-2">
+                                    <div className="logo-box">
+                                        <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/index.html"
+                                           className="logo"><img src="./Aduca - Education HTML Template_files/logo.png"
+                                                                 alt="logo"/></a>
+                                        <div className="user-btn-action">
+                                            <div
+                                                className="search-menu-toggle icon-element icon-element-sm shadow-sm mr-2"
+                                                data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Search">
+                                                <i className="la la-search"></i>
+                                            </div>
+                                            <div
+                                                className="off-canvas-menu-toggle cat-menu-toggle icon-element icon-element-sm shadow-sm mr-2"
+                                                data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Category menu">
+                                                <i className="la la-th-large"></i>
+                                            </div>
+                                            <div
+                                                className="off-canvas-menu-toggle main-menu-toggle icon-element icon-element-sm shadow-sm"
+                                                data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Main menu">
+                                                <i className="la la-bars"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-10">
+                                    <div className="menu-wrapper">
+                                        <div className="menu-category">
+                                            <ul>
+                                                <li>
+                                                    <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Categories <i
+                                                        className="la la-angle-down fs-12"></i></a>
+                                                    <ul className="cat-dropdown-menu">
+                                                        <li>
+                                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">Development <i
+                                                                className="la la-angle-right"></i></a>
+                                                            <ul className="sub-menu">
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                                                    Development</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Web
+                                                                    Development</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Mobile
+                                                                    Apps</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Game
+                                                                    Development</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Databases</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Programming
+                                                                    Languages</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Software
+                                                                    Testing</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Software
+                                                                    Engineering</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">E-Commerce</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">business <i
+                                                                className="la la-angle-right"></i></a>
+                                                            <ul className="sub-menu">
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                                                    Business</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Finance</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Entrepreneurship</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Strategy</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Real
+                                                                    Estate</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Home
+                                                                    Business</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Communications</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Industry</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">IT &amp; Software <i
+                                                                className="la la-angle-right"></i></a>
+                                                            <ul className="sub-menu">
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                                                    IT &amp; Software</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">IT
+                                                                    Certification</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Hardware</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Network &amp; Security</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Operating
+                                                                    Systems</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">Finance &amp; Accounting <i
+                                                                className="la la-angle-right"></i></a>
+                                                            <ul className="sub-menu">
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"> All
+                                                                    Finance &amp; Accounting</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Accounting &amp; Bookkeeping</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Cryptocurrency &amp; Blockchain</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Economics</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Investing &amp; Trading</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other
+                                                                    Finance &amp; Economics</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">design <i
+                                                                className="la la-angle-right"></i></a>
+                                                            <ul className="sub-menu">
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                                                    Design</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Graphic
+                                                                    Design</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Web
+                                                                    Design</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Design
+                                                                    Tools</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">3D &amp; Animation</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">User
+                                                                    Experience</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">Personal
+                                                                Development <i className="la la-angle-right"></i></a>
+                                                            <ul className="sub-menu">
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                                                    Personal Development</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Personal
+                                                                    Transformation</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Productivity</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Leadership</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Personal
+                                                                    Finance</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Career
+                                                                    Development</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Parenting &amp; Relationships</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Happiness</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">Marketing <i
+                                                                className="la la-angle-right"></i></a>
+                                                            <ul className="sub-menu">
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                                                    Marketing</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Digital
+                                                                    Marketing</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Search
+                                                                    Engine Optimization</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Social
+                                                                    Media Marketing</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Branding</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Video &amp; Mobile
+                                                                    Marketing</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Affiliate
+                                                                    Marketing</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Growth
+                                                                    Hacking</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">Health &amp; Fitness <i
+                                                                className="la la-angle-right"></i></a>
+                                                            <ul className="sub-menu">
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                                                    Health &amp; Fitness</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Fitness</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Sports</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Dieting</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Self
+                                                                    Defense</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Meditation</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Mental
+                                                                    Health</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Yoga</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Dance</a>
+                                                                </li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">Photography <i
+                                                                className="la la-angle-right"></i></a>
+                                                            <ul className="sub-menu">
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                                                    Photography</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Digital
+                                                                    Photography</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Photography
+                                                                    Fundamentals</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Commercial
+                                                                    Photography</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Video
+                                                                    Design</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Photography
+                                                                    Tools</a></li>
+                                                                <li><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <form method="post">
+                                            <div className="form-group mb-0">
+                                                <input className="form-control form--control pl-3" type="text"
+                                                       name="search" placeholder="Search for anything"/>
+                                                <span className="la la-search search-icon"></span>
+                                            </div>
+                                        </form>
+                                        <nav className="main-menu">
+                                            <ul>
+                                                <li>
+                                                    <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Home <i
+                                                        className="la la-angle-down fs-12"></i></a>
+                                                    <ul className="dropdown-menu-item">
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/index.html">Home
+                                                            One</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/home-2.html">Home
+                                                            Two</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/home-3.html">Home
+                                                            Three</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/home-4.html">Home
+                                                            four</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">courses <i
+                                                        className="la la-angle-down fs-12"></i></a>
+                                                    <ul className="dropdown-menu-item">
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">course
+                                                            grid</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-list.html">course
+                                                            list</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid-left-sidebar.html">grid
+                                                            left sidebar</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid-right-sidebar.html">grid
+                                                            right sidebar</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-list-left-sidebar.html">list
+                                                            left sidebar <span
+                                                                className="ribbon ribbon-blue-bg">New</span></a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-list-right-sidebar.html">list
+                                                            right sidebar <span
+                                                                className="ribbon ribbon-blue-bg">New</span></a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-details.html">course
+                                                            details</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/lesson-details.html">lesson
+                                                            details</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/my-courses.html">My
+                                                            courses</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Student <i
+                                                        className="la la-angle-down fs-12"></i></a>
+                                                    <ul className="dropdown-menu-item">
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-detail.html">student
+                                                            detail</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-quiz.html">take
+                                                            quiz</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-quiz-results.html">quiz
+                                                            results</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-quiz-result-details.html">quiz
+                                                            details</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-quiz-result-details-2.html">quiz
+                                                            details 2</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-path.html">path
+                                                            details</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-path-assessment.html">Skill
+                                                            Assessment</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-path-assessment-result.html">Skill
+                                                            result</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li className="mega-menu-has">
+                                                    <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">pages <i
+                                                        className="la la-angle-down fs-12"></i></a>
+                                                    <div className="dropdown-menu-item mega-menu">
+                                                        <ul className="row no-gutters">
+                                                            <li className="col-lg-3">
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/dashboard.html">dashboard <span
+                                                                    className="ribbon">Hot</span></a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/about.html">about</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/teachers.html">Teachers</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/teacher-detail.html">Teacher
+                                                                    detail</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/categories.html">categories</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/terms-and-conditions.html">Terms &amp; conditions</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/privacy-policy.html">privacy
+                                                                    policy</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/invite.html">invite
+                                                                    friend</a>
+                                                            </li>
+                                                            <li className="col-lg-3">
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/careers.html">careers</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/career-details.html">career
+                                                                    details</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/become-a-teacher.html">become
+                                                                    an instructor</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/faq.html">FAQs</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/admission.html">admission</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/gallery.html">gallery</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/pricing-table.html">pricing
+                                                                    tables</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/contact.html">contact</a>
+                                                            </li>
+                                                            <li className="col-lg-3">
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/for-business.html">for
+                                                                    business</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/sign-up.html">sign-up</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/login.html">login</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/recover.html">recover</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/shopping-cart.html">cart</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/checkout.html">checkout</a>
+                                                                <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/error.html">page
+                                                                    404</a>
+                                                            </li>
+                                                            <li className="col-lg-3">
+                                                                <div className="menu-banner position-relative h-100">
+                                                                    <div
+                                                                        className="overlay rounded-rounded opacity-4"></div>
+                                                                    <div
+                                                                        className="menu-banner-content p-4 position-absolute bottom-0 left-0">
+                                                                        <h4 className="fs-20 font-weight-bold pb-3 text-white">30
+                                                                            days free trail for new users</h4>
+                                                                        <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/sign-up.html"
+                                                                           className="btn theme-btn theme-btn-sm theme-btn-white">Start
+                                                                            Learning <i
+                                                                                className="la la-arrow-right icon ml-1"></i></a>
+                                                                    </div>
+                                                                    <img
+                                                                        src="./Aduca - Education HTML Template_files/menu-banner-img.jpg"
+                                                                        alt="menu banner image"
+                                                                        className="w-100 h-100 rounded-rounded"/>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">blog <i
+                                                        className="la la-angle-down fs-12"></i></a>
+                                                    <ul className="dropdown-menu-item">
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-full-width.html">blog
+                                                            full width </a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-no-sidebar.html">blog
+                                                            no sidebar</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-left-sidebar.html">blog
+                                                            left sidebar</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html">blog
+                                                            right sidebar</a></li>
+                                                        <li><a
+                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html">blog
+                                                            detail</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <div className="shop-cart mr-4">
+                                            <ul>
+                                                <li>
+                                                    <p className="shop-cart-btn d-flex align-items-center">
+                                                        <i className="la la-shopping-cart"></i>
+                                                        <span className="product-count">2</span>
+                                                    </p>
+                                                    <ul className="cart-dropdown-menu">
+                                                        <li className="media media-card">
+                                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/shopping-cart.html"
+                                                               className="media-img">
+                                                                <img
+                                                                    src="./Aduca - Education HTML Template_files/small-img.jpg"
+                                                                    alt="Cart image"/>
+                                                            </a>
+                                                            <div className="media-body">
+                                                                <h5><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-details.html">The
+                                                                    Complete JavaScript Course 2021: From Zero to
+                                                                    Expert!</a></h5>
+                                                                <span className="d-block lh-18 py-1">Kamran Ahmed</span>
+                                                                <p className="text-black font-weight-semi-bold lh-18">$12.99 <span
+                                                                    className="before-price fs-14">$129.99</span></p>
+                                                            </div>
+                                                        </li>
+                                                        <li className="media media-card">
+                                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/shopping-cart.html"
+                                                               className="media-img">
+                                                                <img
+                                                                    src="./Aduca - Education HTML Template_files/small-img.jpg"
+                                                                    alt="Cart image"/>
+                                                            </a>
+                                                            <div className="media-body">
+                                                                <h5><a
+                                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-details.html">The
+                                                                    Complete JavaScript Course 2021: From Zero to
+                                                                    Expert!</a></h5>
+                                                                <span className="d-block lh-18 py-1">Kamran Ahmed</span>
+                                                                <p className="text-black font-weight-semi-bold lh-18">$12.99 <span
+                                                                    className="before-price fs-14">$129.99</span></p>
+                                                            </div>
+                                                        </li>
+                                                        <li className="media media-card">
+                                                            <div className="media-body fs-16">
+                                                                <p className="text-black font-weight-semi-bold lh-18">Total: <span
+                                                                    className="cart-total">$12.99</span> <span
+                                                                    className="before-price fs-14">$129.99</span></p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/shopping-cart.html"
+                                                               className="btn theme-btn w-100">Got to cart <i
+                                                                className="la la-arrow-right icon ml-1"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div className="nav-right-button">
+                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/admission.html"
+                                               className="btn theme-btn d-none d-lg-inline-block"><i
+                                                className="la la-user-plus mr-1"></i> Admission</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="off-canvas-menu custom-scrollbar-styled main-off-canvas-menu">
+                    <div className="off-canvas-menu-close main-menu-close icon-element icon-element-sm shadow-sm"
+                         data-toggle="tooltip" data-placement="left" title="" data-original-title="Close menu">
+                        <i className="la la-times"></i>
+                    </div>
+                    <ul className="generic-list-item off-canvas-menu-list pt-90px">
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Home
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/index.html">Home
+                                    One</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/home-2.html">Home
+                                    Two</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/home-3.html">Home
+                                    Three</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/home-4.html">Home
+                                    four</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">courses
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">course
+                                    grid</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-list.html">course
+                                    list</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid-left-sidebar.html">grid
+                                    left sidebar</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid-right-sidebar.html">grid
+                                    right sidebar</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-list-left-sidebar.html">list
+                                    left sidebar <span className="ribbon ribbon-blue-bg">New</span></a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-list-right-sidebar.html">list
+                                    right sidebar <span className="ribbon ribbon-blue-bg">New</span></a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-details.html">course
+                                    details</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/lesson-details.html">lesson
+                                    details</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/my-courses.html">My
+                                    courses</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Student
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-detail.html">student
+                                    detail</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-quiz.html">take
+                                    quiz</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-quiz-results.html">quiz
+                                    results</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-quiz-result-details.html">quiz
+                                    details</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-quiz-result-details-2.html">quiz
+                                    details 2</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-path.html">path
+                                    details</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-path-assessment.html">Skill
+                                    Assessment</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/student-path-assessment-result.html">Skill
+                                    result</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">pages
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/dashboard.html">dashboard <span
+                                    className="ribbon">Hot</span></a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/about.html">about</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/teachers.html">Teachers</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/teacher-detail.html">Teacher
+                                    detail</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/careers.html">careers</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/career-details.html">career
+                                    details</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/categories.html">categories</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/terms-and-conditions.html">Terms &amp; conditions</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/privacy-policy.html">privacy
+                                    policy</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/for-business.html">for
+                                    business</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/become-a-teacher.html">become
+                                    an instructor</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/faq.html">FAQs</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/admission.html">admission</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/gallery.html">gallery</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/pricing-table.html">pricing
+                                    tables</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/contact.html">contact</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/sign-up.html">sign-up</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/login.html">login</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/recover.html">recover</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/shopping-cart.html">cart</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/checkout.html">checkout</a>
+                                </li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/error.html">page
+                                    404</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">blog
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-full-width.html">blog
+                                    full width </a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-no-sidebar.html">blog
+                                    no sidebar</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-left-sidebar.html">blog
+                                    left sidebar</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html">blog
+                                    right sidebar</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html">blog
+                                    detail</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div className="off-canvas-menu custom-scrollbar-styled category-off-canvas-menu">
+                    <div className="off-canvas-menu-close cat-menu-close icon-element icon-element-sm shadow-sm"
+                         data-toggle="tooltip" data-placement="left" title="" data-original-title="Close menu">
+                        <i className="la la-times"></i>
+                    </div>
+                    <ul className="generic-list-item off-canvas-menu-list pt-90px">
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">Development
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                    Development</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Web
+                                    Development</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Mobile
+                                    Apps</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Game
+                                    Development</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Databases</a>
+                                </li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Programming
+                                    Languages</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Software
+                                    Testing</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Software
+                                    Engineering</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">E-Commerce</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">business
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                    Business</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Finance</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Entrepreneurship</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Strategy</a>
+                                </li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Real
+                                    Estate</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Home
+                                    Business</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Communications</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Industry</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">IT &amp; Software
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                    IT &amp; Software</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">IT
+                                    Certification</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Hardware</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Network &amp; Security</a>
+                                </li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Operating
+                                    Systems</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">Finance &amp; Accounting
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"> All
+                                    Finance &amp; Accounting</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Accounting &amp; Bookkeeping</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Cryptocurrency &amp; Blockchain</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Economics</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Investing &amp; Trading</a>
+                                </li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other
+                                    Finance &amp; Economics</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">design
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                    Design</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Graphic
+                                    Design</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Web
+                                    Design</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Design
+                                    Tools</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">3D &amp; Animation</a>
+                                </li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">User
+                                    Experience</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">Personal
+                                Development
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                    Personal Development</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Personal
+                                    Transformation</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Productivity</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Leadership</a>
+                                </li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Personal
+                                    Finance</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Career
+                                    Development</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Parenting &amp; Relationships</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Happiness</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">Marketing
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                    Marketing</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Digital
+                                    Marketing</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Search
+                                    Engine Optimization</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Social
+                                    Media Marketing</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Branding</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Video &amp; Mobile
+                                    Marketing</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Affiliate
+                                    Marketing</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Growth
+                                    Hacking</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">Health &amp; Fitness
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                    Health &amp; Fitness</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Fitness</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Sports</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Dieting</a>
+                                </li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Self
+                                    Defense</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Meditation</a>
+                                </li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Mental
+                                    Health</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Yoga</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Dance</a>
+                                </li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-grid.html">Photography
+                                <button className="sub-nav-toggler" type="button"><i className="la la-angle-down"></i>
+                                </button>
+                            </a>
+                            <ul className="sub-menu">
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">All
+                                    Photography</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Digital
+                                    Photography</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Photography
+                                    Fundamentals</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Commercial
+                                    Photography</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Video
+                                    Design</a></li>
+                                <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Photography
+                                    Tools</a></li>
+                                <li><a
+                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Other</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div className="mobile-search-form">
+                    <div className="d-flex align-items-center">
+                        <form method="post" className="flex-grow-1 mr-3">
+                            <div className="form-group mb-0">
+                                <input className="form-control form--control pl-3" type="text" name="search"
+                                       placeholder="Search for anything"/>
+                                <span className="la la-search search-icon"></span>
+                            </div>
+                        </form>
+                        <div className="search-bar-close icon-element icon-element-sm shadow-sm">
+                            <i className="la la-times"></i>
+                        </div>
+                    </div>
+                </div>
+                <div className="body-overlay"></div>
+            </header>
+            <section className="breadcrumb-area pt-80px pb-80px pattern-bg">
+                <div className="container">
+                    <div className="breadcrumb-content">
+                        <div className="section-heading pb-3">
+                            <h2 className="section__title">6 Ways to Instantly Improve your Ui Design</h2>
+                        </div>
+                        <ul className="generic-list-item generic-list-item-arrow d-flex flex-wrap align-items-center">
+                            <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/index.html">Home</a>
+                            </li>
+                            <li><a
+                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-no-sidebar.html">Blog</a>
+                            </li>
+                            <li>6 Ways to Instantly Improve your Ui Design</li>
+                        </ul>
+                        <ul className="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center flex-wrap fs-14 pt-2">
+                            <li className="d-flex align-items-center">By<a
+                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">TechyDevs</a>
+                            </li>
+                            <li className="d-flex align-items-center">Jan 24, 2020</li>
+                            <li className="d-flex align-items-center"><a
+                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#comments"
+                                className="page-scroll">4 Comments</a></li>
+                            <li className="d-flex align-items-center">130 Shares</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section className="blog-area pt-100px pb-100px">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-8 mb-5">
+                            <div className="card card-item">
+                                <div className="card-body">
+                                    <p className="card-text pb-3">Investig ationes demons trave runt lectores legere
+                                        liusry quod ii legunt saepius claritas Investig ationes. Pharetra dui, nec
+                                        tincidunt ante mauris eu diam. Phasellus viverra nisl vitae cursus aei uismod
+                                        suspendisse saepius claritas investig. Lorem ipsum dolor sit amet, consectet
+                                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnag
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborinu
+                                        aliquip ex ea commodo consequat. Du aute irure dolor in reprehenderit inlore
+                                        voluptate velit esse cillum dolore. Cras eget sollicitudin lorem.</p>
+                                    <p className="card-text pb-3">Cras eget sollicitudin lorem. Etiam commodo ultricies
+                                        luctus. Integer porttitor ligula eget quam blandit finibus. Suspendisse potenti.
+                                        Nulla blandit augue orci, eget tristique massa fermentum sed. Duis ac maximus
+                                        nulla, et pharetra turpis.</p>
+                                    <div className="row pb-3">
+                                        <div className="col-lg-6">
+                                            <h3 className="fs-20 font-weight-semi-bold">Content</h3>
+                                            <ul className="generic-list-item generic-list-item-bullet pt-3">
+                                                <li>Etiam commodo ultricies luctus.</li>
+                                                <li>Anim pariatur cliche reprehenderit.</li>
+                                                <li>Consectetur adipisicing elit.</li>
+                                                <li>Investig ationes demons trave.</li>
+                                                <li>Integer porttitor ligula eget.</li>
+                                                <li>Nulla blandit augue orci.</li>
+                                            </ul>
+                                        </div>
+                                        <div className="col-lg-6">
+                                            <div className="mt-3">
+                                                <img src="./Aduca - Education HTML Template_files/img1.jpg"
+                                                     alt="blog-img" className="img-fluid rounded-rounded lazy"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p className="card-text pb-3">Anim pariatur cliche reprehenderit, enim eiusmod high
+                                        life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+                                        cupidatat skateboard dolor brunch. Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Accusantium asperiores</p>
+                                    <div className="section-block"></div>
+                                    <h3 className="fs-18 font-weight-semi-bold pt-3">Tags</h3>
+                                    <div className="d-flex flex-wrap justify-content-between align-items-center pt-3">
+                                        <ul className="generic-list-item generic-list-item-boxed d-flex flex-wrap fs-15">
+                                            <li className="mr-2"><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Web
+                                                Design</a></li>
+                                            <li className="mr-2"><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">UI
+                                                Design</a></li>
+                                        </ul>
+                                        <div className="share-wrap">
+                                            <ul className="social-icons social-icons-styled">
+                                                <li className="mr-0"><a
+                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"
+                                                    className="facebook-bg"><i className="la la-facebook"></i></a></li>
+                                                <li className="mr-0"><a
+                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"
+                                                    className="twitter-bg"><i className="la la-twitter"></i></a></li>
+                                                <li className="mr-0"><a
+                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"
+                                                    className="instagram-bg"><i className="la la-instagram"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div
+                                                className="icon-element icon-element-sm shadow-sm cursor-pointer share-toggle"
+                                                title="Toggle to expand social icons"><i
+                                                className="la la-share-alt"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="instructor-wrap py-5">
+                                <h3 className="fs-22 font-weight-semi-bold pb-4">About the author</h3>
+                                <div className="media media-card">
+                                    <div className="media-img rounded-full avatar-lg mr-4">
+                                        <img src="./Aduca - Education HTML Template_files/small-avatar-1.jpg"
+                                             alt="Avatar image" className="rounded-full lazy"/>
+                                    </div>
+                                    <div className="media-body">
+                                        <h5>Alex Smith</h5>
+                                        <span className="d-block lh-18 pt-2 pb-2">www.techydevs.com</span>
+                                        <p className="pb-3">I'm a growth-oriented digital marketer with a passion for
+                                            content marketing, social media marketing wonders, conversion rate
+                                            optimization, and keyword research. I strongly support permission marketing
+                                            and earned media. More than anything</p>
+                                        <ul className="social-icons social-icons-styled social--icons-styled">
+                                            <li><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"><i
+                                                className="la la-facebook"></i></a></li>
+                                            <li><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"><i
+                                                className="la la-twitter"></i></a></li>
+                                            <li><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"><i
+                                                className="la la-instagram"></i></a></li>
+                                            <li><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"><i
+                                                className="la la-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="section-block"></div>
+                            <div className="comments-wrap pt-5" id="comments">
+                                <div className="d-flex align-items-center justify-content-between pb-4">
+                                    <h3 className="fs-22 font-weight-semi-bold">Comments</h3>
+                                    <span className="ribbon ribbon-lg">4</span>
+                                </div>
+                                <div className="comment-list">
+                                    <div className="media media-card border-bottom border-bottom-gray pb-4 mb-4">
+                                        <div className="media-img mr-4 rounded-full">
+                                            <img className="rounded-full lazy"
+                                                 src="./Aduca - Education HTML Template_files/small-avatar-1.jpg"
+                                                 alt="User image"/>
+                                        </div>
+                                        <div className="media-body">
+                                            <h5 className="pb-2">Kavi arasan</h5>
+                                            <span className="d-block lh-18 pb-2">a month ago</span>
+                                            <p className="pb-3">This is one of the best courses I have taken in Udemy.
+                                                It is very complete, and it has made continue learning about Java and
+                                                SQL databases as well.</p>
+                                            <div
+                                                className="helpful-action d-flex align-items-center justify-content-between">
+                                                <a className="btn theme-btn theme-btn-sm theme-btn-transparent lh-30"
+                                                   href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"
+                                                   data-toggle="modal" data-target="#replyModal"><i
+                                                    className="la la-reply mr-1"></i> Reply</a>
+                                                <div className="pl-2">
+                                                    <span className="fs-13">Was this review helpful?</span>
+                                                    <button className="btn">Yes</button>
+                                                    <button className="btn">No</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="media media-card border-bottom border-bottom-gray pb-4 mb-4 review-reply">
+                                        <div className="media-img mr-4 rounded-full">
+                                            <img className="rounded-full lazy"
+                                                 src="./Aduca - Education HTML Template_files/small-avatar-2.jpg"
+                                                 alt="User image"/>
+                                        </div>
+                                        <div className="media-body">
+                                            <h5 className="pb-2">Jitesh Shaw</h5>
+                                            <span className="d-block lh-18 pb-2">1 months ago</span>
+                                            <p className="pb-3">This is one of the best courses I have taken in Udemy.
+                                                It is very complete, and it has made continue learning about Java and
+                                                SQL databases as well.</p>
+                                            <div
+                                                className="helpful-action d-flex align-items-center justify-content-between">
+                                                <a className="btn theme-btn theme-btn-sm theme-btn-transparent lh-30"
+                                                   href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"
+                                                   data-toggle="modal" data-target="#replyModal"><i
+                                                    className="la la-reply mr-1"></i> Reply</a>
+                                                <div className="pl-2">
+                                                    <span className="fs-13">Was this review helpful?</span>
+                                                    <button className="btn">Yes</button>
+                                                    <button className="btn">No</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="media media-card border-bottom border-bottom-gray pb-4 mb-4">
+                                        <div className="media-img mr-4 rounded-full">
+                                            <img className="rounded-full lazy"
+                                                 src="./Aduca - Education HTML Template_files/small-avatar-3.jpg"
+                                                 alt="User image"/>
+                                        </div>
+                                        <div className="media-body">
+                                            <h5 className="pb-2">Miguel Sanches</h5>
+                                            <span className="d-block lh-18 pb-2">2 month ago</span>
+                                            <p className="pb-3">This is one of the best courses I have taken in Udemy.
+                                                It is very complete, and it has made continue learning about Java and
+                                                SQL databases as well.</p>
+                                            <div
+                                                className="helpful-action d-flex align-items-center justify-content-between">
+                                                <a className="btn theme-btn theme-btn-sm theme-btn-transparent lh-30"
+                                                   href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"
+                                                   data-toggle="modal" data-target="#replyModal"><i
+                                                    className="la la-reply mr-1"></i> Reply</a>
+                                                <div className="pl-2">
+                                                    <span className="fs-13">Was this review helpful?</span>
+                                                    <button className="btn">Yes</button>
+                                                    <button className="btn">No</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="load-more-btn-box text-center pt-3 pb-5">
+                                    <button className="btn theme-btn theme-btn-sm theme-btn-transparent lh-30"><i
+                                        className="la la-refresh mr-1"></i> Load More Comment
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="section-block"></div>
+                            <div className="add-comment-wrap pt-5">
+                                <h3 className="fs-22 font-weight-semi-bold pb-4">Add a Comment</h3>
+                                <form method="post" className="row">
+                                    <div className="input-box col-lg-6">
+                                        <label className="label-text">Name</label>
+                                        <div className="form-group">
+                                            <input className="form-control form--control" type="text" name="name"
+                                                   placeholder="Your Name"/>
+                                            <span className="la la-user input-icon"></span>
+                                            <div data-lastpass-icon-root="true" style={{
+                                                position: 'relative',
+                                                height: '0px',
+                                                width: '0px',
+                                                float: 'left'
+                                            }}>
+                                                <template>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg" data-lastpass-icon="true"
+                                                         style={{
+                                                             position: 'absolute',
+                                                             cursor: 'pointer',
+                                                             height: '22px',
+                                                             maxHeight: '22px',
+                                                             width: '22px',
+                                                             maxWidth: '22px',
+                                                             top: '-36px',
+                                                             left: '331px',
+                                                             zIndex: 'auto',
+                                                             color: 'rgb(186, 192, 202)'
+                                                         }}>
+                                                        <rect x="0.680176" y="0.763062" width="22.6392" height="22.4737"
+                                                              rx="4" fill="currentColor"></rect>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                              d="M19.7935 7.9516C19.7935 7.64414 20.0427 7.3949 20.3502 7.3949C20.6576 7.3949 20.9069 7.64414 20.9069 7.9516V16.0487C20.9069 16.3562 20.6576 16.6054 20.3502 16.6054C20.0427 16.6054 19.7935 16.3562 19.7935 16.0487V7.9516Z"
+                                                              fill="white"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                              d="M4.76288 13.6577C5.68525 13.6577 6.43298 12.9154 6.43298 11.9998C6.43298 11.0842 5.68525 10.3419 4.76288 10.3419C3.8405 10.3419 3.09277 11.0842 3.09277 11.9998C3.09277 12.9154 3.8405 13.6577 4.76288 13.6577Z"
+                                                              fill="white"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                              d="M10.3298 13.6577C11.2521 13.6577 11.9999 12.9154 11.9999 11.9998C11.9999 11.0842 11.2521 10.3419 10.3298 10.3419C9.4074 10.3419 8.65967 11.0842 8.65967 11.9998C8.65967 12.9154 9.4074 13.6577 10.3298 13.6577Z"
+                                                              fill="white"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                              d="M15.8964 13.6577C16.8188 13.6577 17.5665 12.9154 17.5665 11.9998C17.5665 11.0842 16.8188 10.3419 15.8964 10.3419C14.974 10.3419 14.2263 11.0842 14.2263 11.9998C14.2263 12.9154 14.974 13.6577 15.8964 13.6577Z"
+                                                              fill="white"></path>
+                                                    </svg>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="input-box col-lg-6">
+                                        <label className="label-text">Email</label>
+                                        <div className="form-group">
+                                            <input className="form-control form--control" type="email" name="email"
+                                                   placeholder="Email Address"/>
+                                            <span className="la la-envelope input-icon"></span>
+                                        </div>
+                                    </div>
+                                    <div className="input-box col-lg-12">
+                                        <label className="label-text">Message</label>
+                                        <div className="form-group">
+                                            <textarea className="form-control form--control pl-3" name="message"
+                                                      placeholder="Write Message" rows={5}></textarea>
+                                        </div>
+                                    </div>
+                                    <div className="btn-box col-lg-12">
+                                        <div className="custom-control custom-checkbox mb-3 fs-15">
+                                            <input type="checkbox" className="custom-control-input" id="saveCheckbox"
+                                                   required/>
+                                            <label className="custom-control-label custom--control-label"
+                                                   htmlFor="saveCheckbox">
+                                                Save my name, and email in this browser for the next time I comment.
+                                            </label>
+                                        </div>
+                                        <button className="btn theme-btn" type="submit">Submit Comment</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div className="col-lg-4">
+                            <div className="sidebar">
+                                <div className="card card-item">
+                                    <div className="card-body">
+                                        <h3 className="card-title fs-18 pb-2">Search Field</h3>
+                                        <div className="divider"><span></span></div>
+                                        <form method="post">
+                                            <div className="form-group mb-0">
+                                                <input className="form-control form--control pl-3" type="text"
+                                                       name="search" placeholder="Search courses"/>
+                                                <span className="la la-search search-icon"></span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div className="card card-item">
+                                    <div className="card-body">
+                                        <h3 className="card-title fs-18 pb-2">Categories</h3>
+                                        <div className="divider"><span></span></div>
+                                        <div className="custom-control custom-checkbox mb-1 fs-15">
+                                            <input type="checkbox" className="custom-control-input" id="catCheckbox"
+                                                   required/>
+                                            <label className="custom-control-label custom--control-label text-black"
+                                                   htmlFor="catCheckbox">
+                                                Business<span className="ml-1 text-gray">(12,300)</span>
+                                            </label>
+                                        </div>
+                                        <div className="custom-control custom-checkbox mb-1 fs-15">
+                                            <input type="checkbox" className="custom-control-input" id="catCheckbox2"
+                                                   required/>
+                                            <label className="custom-control-label custom--control-label text-black"
+                                                   htmlFor="catCheckbox2">
+                                                UI &amp; UX<span className="ml-1 text-gray">(12,300)</span>
+                                            </label>
+                                        </div>
+                                        <div className="custom-control custom-checkbox mb-1 fs-15">
+                                            <input type="checkbox" className="custom-control-input" id="catCheckbox3"
+                                                   required/>
+                                            <label className="custom-control-label custom--control-label text-black"
+                                                   htmlFor="catCheckbox3">
+                                                Animation<span className="ml-1 text-gray">(12,300)</span>
+                                            </label>
+                                        </div>
+                                        <div className="custom-control custom-checkbox mb-1 fs-15">
+                                            <input type="checkbox" className="custom-control-input" id="catCheckbox4"
+                                                   required/>
+                                            <label className="custom-control-label custom--control-label text-black"
+                                                   htmlFor="catCheckbox4">
+                                                Game Design<span className="ml-1 text-gray">(12,300)</span>
+                                            </label>
+                                        </div>
+                                        <div className="collapse" id="collapseMore">
+                                            <div className="custom-control custom-checkbox mb-1 fs-15">
+                                                <input type="checkbox" className="custom-control-input"
+                                                       id="catCheckbox5" required/>
+                                                <label className="custom-control-label custom--control-label text-black"
+                                                       htmlFor="catCheckbox5">
+                                                    Graphic Design<span className="ml-1 text-gray">(12,300)</span>
+                                                </label>
+                                            </div>
+                                            <div className="custom-control custom-checkbox mb-1 fs-15">
+                                                <input type="checkbox" className="custom-control-input"
+                                                       id="catCheckbox6" required/>
+                                                <label className="custom-control-label custom--control-label text-black"
+                                                       htmlFor="catCheckbox6">
+                                                    Typography<span className="ml-1 text-gray">(12,300)</span>
+                                                </label>
+                                            </div>
+                                            <div className="custom-control custom-checkbox mb-1 fs-15">
+                                                <input type="checkbox" className="custom-control-input"
+                                                       id="catCheckbox7" required/>
+                                                <label className="custom-control-label custom--control-label text-black"
+                                                       htmlFor="catCheckbox7">
+                                                    Web Development<span className="ml-1 text-gray">(12,300)</span>
+                                                </label>
+                                            </div>
+                                            <div className="custom-control custom-checkbox mb-1 fs-15">
+                                                <input type="checkbox" className="custom-control-input"
+                                                       id="catCheckbox8" required/>
+                                                <label className="custom-control-label custom--control-label text-black"
+                                                       htmlFor="catCheckbox8">
+                                                    Photography<span className="ml-1 text-gray">(12,300)</span>
+                                                </label>
+                                            </div>
+                                            <div className="custom-control custom-checkbox mb-1 fs-15">
+                                                <input type="checkbox" className="custom-control-input"
+                                                       id="catCheckbox9" required/>
+                                                <label className="custom-control-label custom--control-label text-black"
+                                                       htmlFor="catCheckbox9">
+                                                    Finance<span className="ml-1 text-gray">(12,300)</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <a className="collapse-btn collapse--btn fs-15" data-toggle="collapse"
+                                           href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#collapseMore"
+                                           role="button" aria-expanded="false" aria-controls="collapseMore">
+                                            <span className="collapse-btn-hide">Show more<i
+                                                className="la la-angle-down ml-1 fs-14"></i></span>
+                                            <span className="collapse-btn-show">Show less<i
+                                                className="la la-angle-up ml-1 fs-14"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className="card card-item">
+                                    <div className="card-body">
+                                        <h3 className="card-title fs-18 pb-2">Archives</h3>
+                                        <div className="divider"><span></span></div>
+                                        <ul className="generic-list-item">
+                                            <li><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">February
+                                                2019</a></li>
+                                            <li><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">January
+                                                2018</a></li>
+                                            <li><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">December
+                                                2017</a></li>
+                                            <li><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">November
+                                                2017</a></li>
+                                            <li><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">January
+                                                2016</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="card card-item">
+                                    <div className="card-body">
+                                        <h3 className="card-title fs-18 pb-2">Recent Posts</h3>
+                                        <div className="divider"><span></span></div>
+                                        <div className="media media-card border-bottom border-bottom-gray pb-4 mb-4">
+                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-details.html"
+                                               className="media-img">
+                                                <img className="mr-3"
+                                                     src="./Aduca - Education HTML Template_files/small-img-2.jpg"
+                                                     alt="Related course image"/>
+                                            </a>
+                                            <div className="media-body">
+                                                <h5 className="fs-15"><a
+                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-details.html">The
+                                                    Complete JavaScript Course 2021</a></h5>
+                                                <span className="d-block lh-18 py-1 fs-14">Kamran Ahmed</span>
+                                                <p className="text-black font-weight-semi-bold lh-18 fs-15">$12.99 <span
+                                                    className="before-price fs-14">$129.99</span></p>
+                                            </div>
+                                        </div>
+                                        <div className="media media-card border-bottom border-bottom-gray pb-4 mb-4">
+                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-details.html"
+                                               className="media-img">
+                                                <img className="mr-3"
+                                                     src="./Aduca - Education HTML Template_files/small-img-3.jpg"
+                                                     alt="Related course image"/>
+                                            </a>
+                                            <div className="media-body">
+                                                <h5 className="fs-15"><a
+                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-details.html">Learning
+                                                    jQuery Mobile for Beginners</a></h5>
+                                                <span className="d-block lh-18 py-1 fs-14">Kamran Ahmed</span>
+                                                <p className="text-black font-weight-semi-bold lh-18 fs-15">$129.99</p>
+                                            </div>
+                                        </div>
+                                        <div className="media media-card border-bottom border-bottom-gray pb-4 mb-4">
+                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-details.html"
+                                               className="media-img">
+                                                <img className="mr-3"
+                                                     src="./Aduca - Education HTML Template_files/small-img-4.jpg"
+                                                     alt="Related course image"/>
+                                            </a>
+                                            <div className="media-body">
+                                                <h5 className="fs-15"><a
+                                                    href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/course-details.html">Introduction
+                                                    LearnPress – LMS plugin</a></h5>
+                                                <span className="d-block lh-18 py-1 fs-14">Kamran Ahmed</span>
+                                                <p className="text-black font-weight-semi-bold lh-18 fs-15">Free</p>
+                                            </div>
+                                        </div>
+                                        <div className="view-all-course-btn-box">
+                                            <a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-no-sidebar.html"
+                                               className="btn theme-btn w-100">View All Posts <i
+                                                className="la la-arrow-right icon ml-1"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="card card-item">
+                                    <div className="card-body">
+                                        <h3 className="card-title fs-18 pb-2">Sidebar Form</h3>
+                                        <div className="divider"><span></span></div>
+                                        <form method="post">
+                                            <div className="form-group">
+                                                <input className="form-control form--control" type="text" name="text"
+                                                       placeholder="Name"/>
+                                                <span className="la la-user input-icon"></span>
+                                                <div data-lastpass-icon-root="true"
+                                                     style={{
+                                                         position: 'relative',
+                                                         height: '0px !important',
+                                                         width: '0px !important',
+                                                         float: 'left'
+                                                     }}>
+                                                    <template>
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                             xmlns="http://www.w3.org/2000/svg"
+                                                             data-lastpass-icon="true"
+                                                             style={{
+                                                                 position: 'absolute',
+                                                                 cursor: 'pointer',
+                                                                 height: '22px',
+                                                                 maxHeight: '22px',
+                                                                 width: '22px',
+                                                                 maxWidth: '22px',
+                                                                 top: '-36px',
+                                                                 left: '279.812px',
+                                                                 zIndex: 'auto',
+                                                                 color: 'rgb(186, 192, 202)'
+                                                             }}>
+                                                            <rect x="0.680176" y="0.763062" width="22.6392"
+                                                                  height="22.4737" rx="4" fill="currentColor"></rect>
+                                                            <path fillRule="evenodd" clipRule="evenodd"
+                                                                  d="M19.7935 7.9516C19.7935 7.64414 20.0427 7.3949 20.3502 7.3949C20.6576 7.3949 20.9069 7.64414 20.9069 7.9516V16.0487C20.9069 16.3562 20.6576 16.6054 20.3502 16.6054C20.0427 16.6054 19.7935 16.3562 19.7935 16.0487V7.9516Z"
+                                                                  fill="white"></path>
+                                                            <path fillRule="evenodd" clipRule="evenodd"
+                                                                  d="M4.76288 13.6577C5.68525 13.6577 6.43298 12.9154 6.43298 11.9998C6.43298 11.0842 5.68525 10.3419 4.76288 10.3419C3.8405 10.3419 3.09277 11.0842 3.09277 11.9998C3.09277 12.9154 3.8405 13.6577 4.76288 13.6577Z"
+                                                                  fill="white"></path>
+                                                            <path fillRule="evenodd" clipRule="evenodd"
+                                                                  d="M10.3298 13.6577C11.2521 13.6577 11.9999 12.9154 11.9999 11.9998C11.9999 11.0842 11.2521 10.3419 10.3298 10.3419C9.4074 10.3419 8.65967 11.0842 8.65967 11.9998C8.65967 12.9154 9.4074 13.6577 10.3298 13.6577Z"
+                                                                  fill="white"></path>
+                                                            <path fillRule="evenodd" clipRule="evenodd"
+                                                                  d="M15.8964 13.6577C16.8188 13.6577 17.5665 12.9154 17.5665 11.9998C17.5665 11.0842 16.8188 10.3419 15.8964 10.3419C14.974 10.3419 14.2263 11.0842 14.2263 11.9998C14.2263 12.9154 14.974 13.6577 15.8964 13.6577Z"
+                                                                  fill="white"></path>
+                                                        </svg>
+                                                    </template>
+                                                </div>
+                                            </div>
+                                            <div className="form-group">
+                                                <input className="form-control form--control" type="email" name="email"
+                                                       placeholder="Email"/>
+                                                <span className="la la-envelope input-icon"></span>
+                                            </div>
+                                            <div className="form-group">
+                                                <textarea className="form-control form--control pl-3" name="message"
+                                                          rows={4} placeholder="Write message"></textarea>
+                                            </div>
+                                            <div className="btn-box">
+                                                <button className="btn theme-btn w-100">Contact Author <i
+                                                    className="la la-arrow-right icon ml-1"></i></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div className="card card-item">
+                                    <div className="card-body">
+                                        <h3 className="card-title fs-18 pb-2">Post Tags</h3>
+                                        <div className="divider"><span></span></div>
+                                        <ul className="generic-list-item generic-list-item-boxed d-flex flex-wrap fs-15">
+                                            <li className="mr-2"><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Business</a>
+                                            </li>
+                                            <li className="mr-2"><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Event</a>
+                                            </li>
+                                            <li className="mr-2"><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Video</a>
+                                            </li>
+                                            <li className="mr-2"><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Audio</a>
+                                            </li>
+                                            <li className="mr-2"><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Software</a>
+                                            </li>
+                                            <li className="mr-2"><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Conference</a>
+                                            </li>
+                                            <li className="mr-2"><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Marketing</a>
+                                            </li>
+                                            <li className="mr-2"><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Freelance</a>
+                                            </li>
+                                            <li className="mr-2"><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Tips</a>
+                                            </li>
+                                            <li className="mr-2"><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Technology</a>
+                                            </li>
+                                            <li className="mr-2"><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">Entrepreneur</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="card card-item">
+                                    <div className="card-body">
+                                        <h3 className="card-title fs-18 pb-2">Subscribe</h3>
+                                        <div className="divider"><span></span></div>
+                                        <form method="post">
+                                            <div className="input-group">
+                                                <input className="form-control form--control pl-3" type="email"
+                                                       name="email" placeholder="Enter email address"/>
+                                                <div className="input-group-append">
+                                                    <button className="btn theme-btn"><i
+                                                        className="la la-arrow-right"></i></button>
+                                                </div>
+                                                <div data-lastpass-icon-root="true" style={{
+                                                    position: 'relative',
+                                                    height: '0px',
+                                                    width: '0px',
+                                                    float: 'left'
+                                                }}>
+                                                    <template>
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                             xmlns="http://www.w3.org/2000/svg"
+                                                             data-lastpass-icon="true"
+                                                             style={{
+                                                                 position: 'absolute',
+                                                                 cursor: 'pointer',
+                                                                 height: '22px',
+                                                                 maxHeight: '22px',
+                                                                 width: '22px',
+                                                                 maxWidth: '22px',
+                                                                 top: '-36px',
+                                                                 left: '279.812px',
+                                                                 zIndex: 'auto',
+                                                                 color: 'rgb(186, 192, 202)'
+                                                             }}>
+                                                            <rect x="0.680176" y="0.763062" width="22.6392"
+                                                                  height="22.4737" rx="4" fill="currentColor"></rect>
+                                                            <path fillRule="evenodd" clipRule="evenodd"
+                                                                  d="M19.7935 7.9516C19.7935 7.64414 20.0427 7.3949 20.3502 7.3949C20.6576 7.3949 20.9069 7.64414 20.9069 7.9516V16.0487C20.9069 16.3562 20.6576 16.6054 20.3502 16.6054C20.0427 16.6054 19.7935 16.3562 19.7935 16.0487V7.9516Z"
+                                                                  fill="white"></path>
+                                                            <path fillRule="evenodd" clipRule="evenodd"
+                                                                  d="M4.76288 13.6577C5.68525 13.6577 6.43298 12.9154 6.43298 11.9998C6.43298 11.0842 5.68525 10.3419 4.76288 10.3419C3.8405 10.3419 3.09277 11.0842 3.09277 11.9998C3.09277 12.9154 3.8405 13.6577 4.76288 13.6577Z"
+                                                                  fill="white"></path>
+                                                            <path fillRule="evenodd" clipRule="evenodd"
+                                                                  d="M10.3298 13.6577C11.2521 13.6577 11.9999 12.9154 11.9999 11.9998C11.9999 11.0842 11.2521 10.3419 10.3298 10.3419C9.4074 10.3419 8.65967 11.0842 8.65967 11.9998C8.65967 12.9154 9.4074 13.6577 10.3298 13.6577Z"
+                                                                  fill="white"></path>
+                                                            <path fillRule="evenodd" clipRule="evenodd"
+                                                                  d="M15.8964 13.6577C16.8188 13.6577 17.5665 12.9154 17.5665 11.9998C17.5665 11.0842 16.8188 10.3419 15.8964 10.3419C14.974 10.3419 14.2263 11.0842 14.2263 11.9998C14.2263 12.9154 14.974 13.6577 15.8964 13.6577Z"
+                                                                  fill="white"></path>
+                                                        </svg>
+                                                    </template>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div className="card card-item">
+                                    <div className="card-body">
+                                        <h3 className="card-title fs-18 pb-2">Connect &amp; Follow</h3>
+                                        <div className="divider"><span></span></div>
+                                        <ul className="social-icons social-icons-styled social--icons-styled">
+                                            <li><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"><i
+                                                className="la la-facebook"></i></a></li>
+                                            <li><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"><i
+                                                className="la la-twitter"></i></a></li>
+                                            <li><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"><i
+                                                className="la la-instagram"></i></a></li>
+                                            <li><a
+                                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#"><i
+                                                className="la la-youtube"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </>
     )
 }
