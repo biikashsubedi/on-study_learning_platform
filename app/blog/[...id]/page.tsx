@@ -1,21 +1,25 @@
 'use client' //this is like a debug
-const url = 'https://jsonplaceholder.typicode.com/posts'
+const url: string = 'https://jsonplaceholder.typicode.com/posts'
+
 interface HomePros {
     params: { id: string }
 }
+
 interface DummyAPI {
     id: number,
     title: string,
     body: string,
 }
 
-async function ApiCall(newUrl:string) {
+async function ApiCall(newUrl: string) {
+    console.log('new url:' + newUrl)
     const response = await fetch(newUrl)
     return await response.json()
 }
+
 export default async function Home({params}: HomePros) {
-   const newUrl= URL(params.id, url).toString()
-    const data=await ApiCall(newUrl)
+    const newUrl = url + '/' + params.id;
+    const data = await ApiCall(newUrl);
     return (
         <>
             <section className="breadcrumb-area pt-80px pb-80px pattern-bg"
@@ -23,7 +27,7 @@ export default async function Home({params}: HomePros) {
                 <div className="container">
                     <div className="breadcrumb-content">
                         <div className="section-heading pb-3">
-                            <h2 className="section__title">6 Ways to Instantly Improve your Ui Design</h2>
+                            <h2 className="section__title">{data.title}</h2>
                         </div>
                         <ul className="generic-list-item generic-list-item-arrow d-flex flex-wrap align-items-center">
                             <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/index.html">Home</a>
@@ -31,7 +35,7 @@ export default async function Home({params}: HomePros) {
                             <li><a
                                 href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-no-sidebar.html">Blog</a>
                             </li>
-                            <li>6 Ways to Instantly Improve your Ui Design</li>
+                            <li>{data.title}</li>
                         </ul>
                         <ul className="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center flex-wrap fs-14 pt-2">
                             <li className="d-flex align-items-center">By<a
@@ -52,18 +56,8 @@ export default async function Home({params}: HomePros) {
                         <div className="col-lg-8 mb-5">
                             <div className="card card-item">
                                 <div className="card-body">
-                                    <p className="card-text pb-3">Investig ationes demons trave runt lectores legere
-                                        liusry quod ii legunt saepius claritas Investig ationes. Pharetra dui, nec
-                                        tincidunt ante mauris eu diam. Phasellus viverra nisl vitae cursus aei uismod
-                                        suspendisse saepius claritas investig. Lorem ipsum dolor sit amet, consectet
-                                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnag
-                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborinu
-                                        aliquip ex ea commodo consequat. Du aute irure dolor in reprehenderit inlore
-                                        voluptate velit esse cillum dolore. Cras eget sollicitudin lorem.</p>
-                                    <p className="card-text pb-3">Cras eget sollicitudin lorem. Etiam commodo ultricies
-                                        luctus. Integer porttitor ligula eget quam blandit finibus. Suspendisse potenti.
-                                        Nulla blandit augue orci, eget tristique massa fermentum sed. Duis ac maximus
-                                        nulla, et pharetra turpis.</p>
+                                    <p className="card-text pb-3">{data.body}</p>
+                                    <p className="card-text pb-3">{data.body}</p>
                                     <div className="row pb-3">
                                         <div className="col-lg-6">
                                             <h3 className="fs-20 font-weight-semi-bold">Content</h3>
@@ -83,10 +77,7 @@ export default async function Home({params}: HomePros) {
                                             </div>
                                         </div>
                                     </div>
-                                    <p className="card-text pb-3">Anim pariatur cliche reprehenderit, enim eiusmod high
-                                        life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
-                                        cupidatat skateboard dolor brunch. Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Accusantium asperiores</p>
+                                    <p className="card-text pb-3">{data.body}</p>
                                     <div className="section-block"></div>
                                     <h3 className="fs-18 font-weight-semi-bold pt-3">Tags</h3>
                                     <div className="d-flex flex-wrap justify-content-between align-items-center pt-3">

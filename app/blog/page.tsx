@@ -58,7 +58,7 @@ export default async function Home() {
 
                                         <div className="card-body">
                                             <h5 className="card-title"><a
-                                                href="/blog">{item.title}</a></h5>
+                                                href={`/blog/${encodeURIComponent(item.id)}`}>{item.title}</a></h5>
                                             <ul className="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center flex-wrap fs-14 pt-2">
                                                 <li className="d-flex align-items-center">By<a
                                                     href={`/blog/${encodeURIComponent(item.id)}`}>TechyDevs</a>
