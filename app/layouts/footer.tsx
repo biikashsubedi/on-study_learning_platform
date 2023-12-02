@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link"
+
 
 export default function Index() {
     return (
@@ -9,11 +11,13 @@ export default function Index() {
                     {/* Col 1 */}
                     <div className="col-lg-3 responsive-column-half">
                         <div className="footer-item">
-                            <a href="#">
-                                <img src="/assets/home/images/logo.png" alt="footer logo" className="footer__logo"/>
-                            </a>
+                            <Link href="/">
+                                <img src="/assets/home/images/8.png" alt="footer logo" width={140} height={41} className="footer__logo"/>
+
+                            </Link>
                             <ul className="generic-list-item pt-4">
                                 <li><a href="tel:+1631237884">+977 9869286303</a></li>
+                                <li><a href="tel:+1631237884">+977 9804131198</a></li>
                                 <li><a href="mailto:support@wbsite.com">nplearnt@gmail.com</a></li>
                                 <li>Kathmandu, Nepal</li>
                             </ul>
@@ -35,10 +39,10 @@ export default function Index() {
                             <h3 className="fs-20 font-weight-semi-bold">Company</h3>
                             <span className="section-divider section--divider"></span>
                             <ul className="generic-list-item">
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Blog</a></li>
+                                <li><Link href="/about-us">About us</Link></li>
+                                <li><Link href="/contact-us">Contact us</Link></li>
+                                <li><Link href="/faq">FAQs</Link></li>
+                                <li><Link href="/blog">Blog</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -46,13 +50,13 @@ export default function Index() {
                     {/* Col 3 */}
                     <div className="col-lg-3 responsive-column-half">
                         <div className="footer-item">
-                            <h3 className="fs-20 font-weight-semi-bold">Courses</h3>
+                            <h3 className="fs-20 font-weight-semi-bold">Catagories</h3>
                             <span className="section-divider section--divider"></span>
                             <ul className="generic-list-item">
-                                <li><a href="#">General Knowledge</a></li>
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">geography</a></li>
-                                <li><a href="#">Sports</a></li>
+                                <li><Link href="/category/generalknowledge">General Knowledge</Link></li>
+                                <li><Link href="/category/history">History</Link></li>
+                                <li><Link href="/category/geography">geography</Link></li>
+                                <li><Link href="/category/sports">Sports</Link></li>
                             </ul>
                         </div>
                     </div>

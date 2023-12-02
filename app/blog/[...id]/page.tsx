@@ -5,6 +5,6 @@ interface HomePros {
 
 export default function Home({params}: HomePros) {
     return (
-        <h1>This is blog with id {params.id}</h1>
+        <h1>This is blog  {params.id}</h1>
     )
 }

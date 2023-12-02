@@ -1,3 +1,5 @@
+
+import Link from 'next/link'
 export default function Index() {
     return (
         <header className="header-menu-area bg-white">
@@ -75,9 +77,9 @@ export default function Index() {
                         <div className="row align-items-center">
                             <div className="col-lg-2">
                                 <div className="logo-box">
-                                    <a href="#" className="logo">
-                                        <img src="/assets/home/images/logo.png" alt="logo"></img>
-                                    </a>
+                                    <Link href="/" className="logo">
+                                        <img src="/assets/home/images/8.png" width={140} height={41} alt="logo"></img>
+                                    </Link>
                                     <div className="user-btn-action">
                                         <div
                                             className="off-canvas-menu-toggle cat-menu-toggle icon-element icon-element-sm shadow-sm mr-2"
@@ -135,10 +137,10 @@ export default function Index() {
                                     <nav className="main-menu ml-3">
                                         <ul>
                                             <li>
-                                                <a href="#">Home</a>
+                                                <Link href="/">Home</Link>
                                             </li>
                                             <li>
-                                                <a href="#">Blog</a>
+                                                <Link href="/blog">Blog</Link>
                                             </li>
                                         </ul>
                                     </nav>

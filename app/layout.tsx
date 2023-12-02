@@ -4,6 +4,8 @@ import Header from './layouts/header';
 import Script from './layouts/script';
 import Footer from './layouts/footer';
 import ScrollTop from './layouts/scroll-top';
+import NextTopLoader from 'nextjs-toploader';
+
 
 export const metadata = {
     title: 'This is Home Page',
@@ -21,7 +23,8 @@ export default function RootLayout({children}: Props) {
 
             <Head/>
             <body className="light-theme">
-            <Loader/>
+            <NextTopLoader color="red" />
+
             <Header/>
 
             {children}
