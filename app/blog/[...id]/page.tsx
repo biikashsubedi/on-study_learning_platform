@@ -1,9 +1,21 @@
 'use client' //this is like a debug
+const url = 'https://jsonplaceholder.typicode.com/posts'
 interface HomePros {
-    params: { id: number }
+    params: { id: string }
+}
+interface DummyAPI {
+    id: number,
+    title: string,
+    body: string,
 }
 
-export default function Home({params}: HomePros) {
+async function ApiCall(newUrl:string) {
+    const response = await fetch(newUrl)
+    return await response.json()
+}
+export default async function Home({params}: HomePros) {
+   const newUrl= URL(params.id, url).toString()
+    const data=await ApiCall(newUrl)
     return (
         <>
             <section className="breadcrumb-area pt-80px pb-80px pattern-bg"

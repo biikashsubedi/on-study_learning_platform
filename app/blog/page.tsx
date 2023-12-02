@@ -46,7 +46,7 @@ export default async function Home() {
                                 <div key={item.id} className="col-lg-6">
                                     <div className="card card-item">
                                         <div className="card-image">
-                                            <Link href={`/blog/${encodeURIComponent(item.title)}`}
+                                            <Link href={`/blog/${encodeURIComponent(item.id)}`}
                                                className="d-block">
                                                 <img className="card-img-top lazy"
                                                      src="/assets/home/images/img8.jpg" alt="Card image cap"/>
@@ -61,32 +61,32 @@ export default async function Home() {
                                                 href="/blog">{item.title}</a></h5>
                                             <ul className="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center flex-wrap fs-14 pt-2">
                                                 <li className="d-flex align-items-center">By<a
-                                                    href={`/blog/${encodeURIComponent(item.title)}`}>TechyDevs</a>
+                                                    href={`/blog/${encodeURIComponent(item.id)}`}>TechyDevs</a>
                                                 </li>
                                                 <li className="d-flex align-items-center"><a
-                                                    href={`/blog/${encodeURIComponent(item.title)}`}>4
+                                                    href={`/blog/${encodeURIComponent(item.id)}`}>4
                                                     Comments</a></li>
                                                 <li className="d-flex align-items-center"><a
-                                                    href={`/blog/${encodeURIComponent(item.title)}`}>130
+                                                    href={`/blog/${encodeURIComponent(item.id)}`}>130
                                                     Likes</a></li>
                                             </ul>
                                             <div className="d-flex justify-content-between align-items-center pt-3">
-                                                <Link href={`/blog/${encodeURIComponent(item.title)}`}
+                                                <Link href={`/blog/${encodeURIComponent(item.id)}`}
                                                    className="btn theme-btn theme-btn-sm theme-btn-white">Read More <i
                                                     className="la la-arrow-right icon ml-1"></i></Link>
                                                 <div className="share-wrap">
                                                     <ul className="social-icons social-icons-styled">
                                                         <li className="mr-0"><Link
-                                                            href={`/blog/${encodeURIComponent(item.title)}`}
+                                                            href={`/blog/${encodeURIComponent(item.id)}`}
                                                             className="facebook-bg"><i
                                                             className="la la-facebook"></i></Link>
                                                         </li>
                                                         <li className="mr-0"><Link
-                                                            href={`/blog/${encodeURIComponent(item.title)}`}
+                                                            href={`/blog/${encodeURIComponent(item.id)}`}
                                                             className="twitter-bg"><i className="la la-twitter"></i></Link>
                                                         </li>
                                                         <li className="mr-0"><Link
-                                                            href={`/blog/${encodeURIComponent(item.title)}`}
+                                                            href={`/blog/${encodeURIComponent(item.id)}`}
                                                             className="instagram-bg"><i className="la la-instagram"></i></Link>
                                                         </li>
                                                     </ul>
