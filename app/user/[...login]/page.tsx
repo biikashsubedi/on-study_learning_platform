@@ -48,7 +48,7 @@ export default function Index() {
 
 
     return (
-        <div className="container logincontainer" id="container">
+        <div className="container logincontainer mt-5" id="container">
             <div className="form-container sign-up">
                 <form>
                     <h1>Create Account</h1>
