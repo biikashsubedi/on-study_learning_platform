@@ -2,36 +2,51 @@
 
 import "./login.css"
 import {useEffect} from 'react';
+import {useRouter} from 'next/router';
+import {redirect} from 'next/navigation'
 
 export default function Index() {
 
+
+    redirect('/404')
+
+
     useEffect(() => {
-        const container = document.getElementById('container') ?? '';
-        const registerBtn = document.getElementById('register') ?? '';
-        const loginBtn = document.getElementById('login') ?? '';
+        const container = document.getElementById('container');
+        const registerBtn = document.getElementById('register');
+        const loginBtn = document.getElementById('login');
 
         function isContainerActive() {
+            // @ts-ignore
             return container.classList.contains('active');
         }
 
         if (isContainerActive()) {
+            // @ts-ignore
             container.classList.add('active');
         }
 
+        // @ts-ignore
         registerBtn.addEventListener('click', () => {
+            // @ts-ignore
             container.classList.add('active');
         });
 
+        // @ts-ignore
         loginBtn.addEventListener('click', () => {
+            // @ts-ignore
             container.classList.remove('active');
         });
 
-        // Clean up event listeners when the component is unmounted
+        // @ts-ignore
         registerBtn.removeEventListener('click', () => {
+            // @ts-ignore
             container.classList.add('active');
         });
 
+        // @ts-ignore
         loginBtn.removeEventListener('click', () => {
+            // @ts-ignore
             container.classList.remove('active');
         });
 
@@ -40,7 +55,7 @@ export default function Index() {
         }
 
         if (isRegisterPage()) {
-            console.log(11111)
+            // @ts-ignore
             container.classList.add("active")
         }
 

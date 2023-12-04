@@ -32,19 +32,19 @@ export default async function Home({params}: HomePros) {
                             <h2 className="section__title">{data.title}</h2>
                         </div>
                         <ul className="generic-list-item generic-list-item-arrow d-flex flex-wrap align-items-center">
-                            <li><Link href={`/blog/${encodeURIComponent(item.id)}`}>Home</Link>
+                            <li><Link href="#">Home</Link>
                             </li>
-                            <li><Link href={`/blog/${encodeURIComponent(item.id)}`}>Blog</Link>
+                            <li><Link href="#">Blog</Link>
                             </li>
                             <li>{data.title}</li>
                         </ul>
                         <ul className="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center flex-wrap fs-14 pt-2">
                             <li className="d-flex align-items-center">By<Link
-                                href={`/blog/${encodeURIComponent(item.id)}`}>TechyDevs</Link>
+                                href="#">TechyDevs</Link>
                             </li>
                             <li className="d-flex align-items-center">Jan 24, 2020</li>
                             <li className="d-flex align-items-center"><Link
-                                href={`/blog/${encodeURIComponent(item.id)}`}
+                                href="#"
                                 className="page-scroll">4 Comments</Link></li>
                             <li className="d-flex align-items-center">130 Shares</li>
                         </ul>
