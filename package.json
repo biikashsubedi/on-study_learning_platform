@@ -11,7 +11,7 @@
   "dependencies": {
     "express": "^4.18.2",
     "jquery": "^3.7.1",
-    "next": "14.0.2",
+    "next": "^14.0.2",
     "nextjs-toploader": "^1.6.4",
     "owl.carousel": "^2.3.4",
     "react": "^18",

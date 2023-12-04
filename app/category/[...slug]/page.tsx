@@ -1,5 +1,8 @@
 'use client'
-const url = 'https://school.web.astrosoftware.com.np/api/v1/samanya-gyan'
+const apiUrl = 'https://school.web.astrosoftware.com.np/api/v1/'
+const apiKey = 'p2yrhocea##)+87ob2#=$8&hs+@yh0dtr^nxeoq$tjug%se4fl'
+const nextUrl = 'samanya-gyan'
+
 
 interface CategoryPros {
     params: {
@@ -14,11 +17,10 @@ interface DummyAPI {
 }
 
 async function ApiCall() {
-    const response = await fetch(url,
+    const response = await fetch(`${apiUrl}${nextUrl}`,
         {
-            // mode: 'no-cors',
             headers: {
-                'api-key': 'p2yrhocea##)+87ob2#=$8&hs+@yh0dtr^nxeoq$tjug%se4fl'
+                'api-key': apiKey
             }
         })
     return await response.json()
