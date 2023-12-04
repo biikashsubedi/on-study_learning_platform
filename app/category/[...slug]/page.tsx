@@ -32,13 +32,13 @@ export default async function Category({params}: CategoryPros) {
     return (
 
         <>
-            {/*{data.map((item: DummyAPI, index: number) => (*/}
-            {/*    <div className="card mb-3 mr-5 ml-5"  key={index}>*/}
-            {/*        <p>{item.id}</p>*/}
-            {/*        <p>{item.title}</p>*/}
-            {/*        <p>{item.body}</p>*/}
-            {/*    </div>*/}
-            {/*))}*/}
+            {data.data.map((item: DummyAPI, index: number) => (
+                <div className="card mb-3 mr-5 ml-5"  key={index}>
+                    <p>{item.id}</p>
+                    <p>{item.title}</p>
+                    <p>{item.body}</p>
+                </div>
+            ))}
 
             <section>
                 <h2> {params.slug} </h2>
