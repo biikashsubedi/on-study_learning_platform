@@ -56,6 +56,7 @@ export default function ScriptJS() {
             <Script src="/assets/home/js/tooltipster.bundle.min.js" strategy="afterInteractive"/>
             <Script src="/assets/home/js/jquery.lazy.min.js" strategy="afterInteractive"/>
             <Script src="/assets/home/js/owl.carousel.min.js" strategy="afterInteractive"/>
+            <Script src="/assets/home/js/loginscript.js" strategy="afterInteractive"/>
             <Script src="/assets/home/js/main.js" strategy="afterInteractive"/>
             <Script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"
                     strategy="afterInteractive"/>
