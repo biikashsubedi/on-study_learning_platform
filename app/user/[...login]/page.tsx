@@ -5,10 +5,18 @@ import {useEffect} from 'react';
 import {useRouter} from 'next/router';
 import {redirect} from 'next/navigation'
 
-export default function Index() {
+interface UserPros {
+    params: {
+        login: string
+    }
+}
 
+export default function Index({params}: UserPros) {
 
-    redirect('/404')
+    const allowedUrls = ["login", "register"];
+    if (!allowedUrls.includes(params.login[0])) {
+        redirect('/404')
+    }
 
 
     useEffect(() => {
