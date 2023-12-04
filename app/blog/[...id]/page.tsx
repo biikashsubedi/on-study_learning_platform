@@ -1,4 +1,6 @@
 'use client' //this is like a debug
+import Link from "next/link";
+
 const url: string = 'https://jsonplaceholder.typicode.com/posts'
 
 interface HomePros {
@@ -30,21 +32,20 @@ export default async function Home({params}: HomePros) {
                             <h2 className="section__title">{data.title}</h2>
                         </div>
                         <ul className="generic-list-item generic-list-item-arrow d-flex flex-wrap align-items-center">
-                            <li><a href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/index.html">Home</a>
+                            <li><Link href={`/blog/${encodeURIComponent(item.id)}`}>Home</Link>
                             </li>
-                            <li><a
-                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-no-sidebar.html">Blog</a>
+                            <li><Link href={`/blog/${encodeURIComponent(item.id)}`}>Blog</Link>
                             </li>
                             <li>{data.title}</li>
                         </ul>
                         <ul className="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center flex-wrap fs-14 pt-2">
-                            <li className="d-flex align-items-center">By<a
-                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#">TechyDevs</a>
+                            <li className="d-flex align-items-center">By<Link
+                                href={`/blog/${encodeURIComponent(item.id)}`}>TechyDevs</Link>
                             </li>
                             <li className="d-flex align-items-center">Jan 24, 2020</li>
-                            <li className="d-flex align-items-center"><a
-                                href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-single.html#comments"
-                                className="page-scroll">4 Comments</a></li>
+                            <li className="d-flex align-items-center"><Link
+                                href={`/blog/${encodeURIComponent(item.id)}`}
+                                className="page-scroll">4 Comments</Link></li>
                             <li className="d-flex align-items-center">130 Shares</li>
                         </ul>
                     </div>

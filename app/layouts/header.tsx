@@ -57,11 +57,11 @@ export default function Index() {
                                 <ul className="generic-list-item d-flex flex-wrap align-items-center fs-14 border-left border-left-gray pl-3 ml-3">
                                     <li className="d-flex align-items-center pr-3 mr-3 border-right border-right-gray">
                                         <i
-                                            className="la la-sign-in mr-1"></i><a
-                                        href="#"> Login</a>
+                                            className="la la-sign-in mr-1"></i><Link
+                                        href="/app/login"> Login</Link>
                                     </li>
                                     <li className="d-flex align-items-center"><i className="la la-user mr-1"></i><a
-                                        href="#">
+                                        href="/app/login">
                                         Register</a></li>
                                 </ul>
                             </div>

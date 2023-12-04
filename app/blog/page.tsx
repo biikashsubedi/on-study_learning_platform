@@ -60,15 +60,15 @@ export default async function Home() {
                                             <h5 className="card-title"><a
                                                 href={`/blog/${encodeURIComponent(item.id)}`}>{item.title}</a></h5>
                                             <ul className="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center flex-wrap fs-14 pt-2">
-                                                <li className="d-flex align-items-center">By<a
-                                                    href={`/blog/${encodeURIComponent(item.id)}`}>TechyDevs</a>
+                                                <li className="d-flex align-items-center">By<Link
+                                                    href={`/blog/${encodeURIComponent(item.id)}`}>TechyDevs</Link>
                                                 </li>
-                                                <li className="d-flex align-items-center"><a
+                                                <li className="d-flex align-items-center"><Link
                                                     href={`/blog/${encodeURIComponent(item.id)}`}>4
-                                                    Comments</a></li>
-                                                <li className="d-flex align-items-center"><a
+                                                    Comments</Link></li>
+                                                <li className="d-flex align-items-center"><Link 
                                                     href={`/blog/${encodeURIComponent(item.id)}`}>130
-                                                    Likes</a></li>
+                                                    Likes</Link></li>
                                             </ul>
                                             <div className="d-flex justify-content-between align-items-center pt-3">
                                                 <Link href={`/blog/${encodeURIComponent(item.id)}`}
@@ -113,12 +113,12 @@ export default async function Home() {
                                 <nav aria-label="Page navigation example" className="pagination-box">
                                     <ul className="pagination justify-content-center">
                                         <li className="page-item">
-                                            <a className="page-link"
-                                               href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#"
+                                            <Link className="page-link"
+                                                  href={`/blog/${encodeURIComponent(item.id)}`}
                                                aria-label="Previous">
                                                 <span aria-hidden="true"><i className="la la-arrow-left"></i></span>
                                                 <span className="sr-only">Previous</span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="page-item active"><a className="page-link"
                                                                             href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#">1</a>
