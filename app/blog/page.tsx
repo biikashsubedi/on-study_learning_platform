@@ -114,17 +114,17 @@ export default async function Home() {
                                     <ul className="pagination justify-content-center">
                                         <li className="page-item">
                                             <Link className="page-link"
-                                                  href={`/blog/${encodeURIComponent(item.id)}`}
+                                                  href=""
                                                aria-label="Previous">
                                                 <span aria-hidden="true"><i className="la la-arrow-left"></i></span>
                                                 <span className="sr-only">Previous</span>
                                             </Link>
                                         </li>
                                         <li className="page-item active"><a className="page-link"
-                                                                            href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#">1</a>
+                                                                            href="#">1</a>
                                         </li>
                                         <li className="page-item"><a className="page-link"
-                                                                     href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#">2</a>
+                                                                     href="#">2</a>
                                         </li>
                                         <li className="page-item"><a className="page-link"
                                                                      href="http://techydevs.com/demos/themes/html/aduca-demo/aduca/blog-right-sidebar.html#">3</a>

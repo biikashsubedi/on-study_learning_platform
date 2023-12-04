@@ -22,6 +22,7 @@ export default function RootLayout({children}: Props) {
             <html lang="en" className="no-touch">
 
             <Head/>
+
             <body className="light-theme">
             <NextTopLoader color="red" />
 
