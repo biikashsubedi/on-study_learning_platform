@@ -1,5 +1,5 @@
 'use client'
-const url = 'https://jsonplaceholder.typicode.com/posts'
+const url = 'https://school.web.astrosoftware.com.np/api/v1/samanya-gyan'
 
 interface CategoryPros {
     params: {
@@ -14,24 +14,29 @@ interface DummyAPI {
 }
 
 async function ApiCall() {
-    const response = await fetch(url)
+    const response = await fetch(url,
+        {
+            // mode: 'no-cors',
+            headers: {
+                'api-key': 'p2yrhocea##)+87ob2#=$8&hs+@yh0dtr^nxeoq$tjug%se4fl'
+            }
+        })
     return await response.json()
 }
 
 export default async function Category({params}: CategoryPros) {
-    const data=await ApiCall()
-
-    console.log( data)
+    const data = await ApiCall()
+    console.log(data)
     return (
 
         <>
-        {data.map((item: DummyAPI, index: number) => (
-            <div className="card mb-3 mr-5 ml-5"  key={index}>
-                <p>{item.id}</p>
-                <p>{item.title}</p>
-                <p>{item.body}</p>
-            </div>
-        ))}
+            {/*{data.map((item: DummyAPI, index: number) => (*/}
+            {/*    <div className="card mb-3 mr-5 ml-5"  key={index}>*/}
+            {/*        <p>{item.id}</p>*/}
+            {/*        <p>{item.title}</p>*/}
+            {/*        <p>{item.body}</p>*/}
+            {/*    </div>*/}
+            {/*))}*/}
 
             <section>
                 <h2> {params.slug} </h2>
