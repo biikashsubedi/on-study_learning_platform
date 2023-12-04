@@ -1,5 +1,6 @@
 export default function Index() {
     return (
+<<<<<<< HEAD
 
         <div className="wrapper overflow-hidden">
             <!-- Top content -->
@@ -396,5 +397,10 @@ export default function Index() {
             </div>
         </div>
 
+=======
+        <>
+            <h1>This isisisisiisiis</h1>
+        </>
+>>>>>>> origin/aakash
     )
 }
