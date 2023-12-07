@@ -2,6 +2,7 @@ const apiUrl = 'https://school.web.astrosoftware.com.np/api/v1/'
 const apiKey = 'p2yrhocea##)+87ob2#=$8&hs+@yh0dtr^nxeoq$tjug%se4fl'
 const samanyaGyanUrl = 'samanya-gyan'
 const lokSewaUrl = 'categories'
+const blogUrl = 'blog'
 
 // Getting lock sewa data from api
 export async function getLokSewaData() {
@@ -39,6 +40,25 @@ export async function getSamanyaGyanData() {
 
     } catch (error) {
         console.error('Error fetching SamanyaGyan:', error.message);
+        throw error;
+    }
+}
+
+// Getting blog data from api
+export async function getBlogData() {
+    try {
+        const response = await fetch(`${apiUrl}${blogUrl}`, {
+            headers: {
+                'Api-Key': apiKey,
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return await response.json();
+
+    } catch (error) {
+        console.error('Error fetching blogs:', error.message);
         throw error;
     }
 }

@@ -9,14 +9,15 @@ import Testimonial from './layouts/homeLayout/testimonial'
 import AboutUs from './layouts/homeLayout/about-us'
 import ContactUs from './layouts/homeLayout/contact-us'
 import Newsletter from './layouts/homeLayout/newsletter'
-import {getLokSewaData, getSamanyaGyanData} from './utils/globalApiFetch';
+import {getBlogData, getLokSewaData, getSamanyaGyanData} from './utils/globalApiFetch';
 
 
 export default async function Home() {
 
-    const [samanyaGyanDatas, LoksewaDatas] = await Promise.all([
+    const [samanyaGyanDatas, LoksewaDatas, blogs] = await Promise.all([
         getSamanyaGyanData(),
         getLokSewaData(),
+        getBlogData(),
     ]);
 
     return (
@@ -24,7 +25,7 @@ export default async function Home() {
             <Slider/>
             <Categories data={{samanyaGyanDatas}}/>
             <Courses/>
-            <Blogs/>
+            <Blogs data={{blogs}}/>
             <CompanyInfo/>
             <Promote/>
             <Testimonial/>
