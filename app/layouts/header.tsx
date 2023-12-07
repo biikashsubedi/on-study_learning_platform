@@ -2,37 +2,6 @@
 
 import Link from 'next/link'
 
-const apiUrl = 'https://school.web.astrosoftware.com.np/api/v1/'
-const apiKey = 'p2yrhocea##)+87ob2#=$8&hs+@yh0dtr^nxeoq$tjug%se4fl'
-const samanyaGyanUrl = 'samanya-gyan'
-const loksewaUrl = 'categories'
-
-
-interface Loksewa {
-    id: number,
-    title: string,
-}
-
-async function getLoksweaData() {
-
-    try {
-        const response = await fetch(`${apiUrl}${loksewaUrl}`, {
-            headers: {
-                'Api-Key': apiKey,
-            },
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return await response.json();
-
-    } catch (error: any) {
-        console.error('Error fetching Loksewa:', error.message);
-        throw error;
-    }
-}
-
 interface SamanyaGyan {
     id: number,
     title: string,
@@ -42,28 +11,15 @@ interface SamanyaGyan {
     globalId: number,
 }
 
-async function getSamanyaGyanData() {
-    try {
-        const response = await fetch(`${apiUrl}${samanyaGyanUrl}`, {
-            headers: {
-                'Api-Key': apiKey,
-            },
-        });
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return await response.json();
-
-    } catch (error: any) {
-        console.error('Error fetching SamanyaGyan:', error.message);
-        throw error;
-    }
+interface Loksewa {
+    id: number,
+    title: string,
 }
 
-export default async function Index() {
+// @ts-ignore
+export default async function Index({data}) {
 
-    const samanyaGyanDatas: Array<SamanyaGyan> = await getSamanyaGyanData();
-    const LoksewaDatas: Array<Loksewa> = await getLoksweaData();
+    const {LoksewaDatas, samanyaGyanDatas} = data;
 
     return (
         <header className="header-menu-area bg-white">
@@ -126,7 +82,8 @@ export default async function Index() {
                                     </li>
                                     <li className="d-flex align-items-center"><i className="la la-user mr-1"></i><Link
                                         href="/user/register">
-                                        Register</Link></li>`
+                                        Register</Link></li>
+                                    `
                                 </ul>
                             </div>
                         </div>
@@ -166,9 +123,7 @@ export default async function Index() {
                                         <ul>
                                             <li>
                                                 <a href="#">Categories
-
-
-                                                    <i className="la la-angle-down fs-12"></i></a>
+                                                <i className="la la-angle-down fs-12"></i></a>
                                                 <ul className="cat-dropdown-menu">
                                                     {samanyaGyanDatas.data.map((item: SamanyaGyan, index: number) => (
                                                         <li><a href="#">{item.title}</a></li>
@@ -184,11 +139,9 @@ export default async function Index() {
                                                                 <a href="#">All</a>
                                                             </li>
                                                             {LoksewaDatas.data.map((item: Loksewa, index: number) => (
-
-
-                                                            <li>
-                                                                <a href="#">{item.title}</a>
-                                                            </li>
+                                                                <li>
+                                                                    <a href="#">{item.title}</a>
+                                                                </li>
                                                             ))}
                                                         </ul>
                                                     </li>
