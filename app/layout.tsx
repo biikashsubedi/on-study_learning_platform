@@ -5,12 +5,8 @@ import Script from './layouts/script';
 import Footer from './layouts/footer';
 import ScrollTop from './layouts/scroll-top';
 import NextTopLoader from 'nextjs-toploader';
+import {getLokSewaData, getSamanyaGyanData} from './utils/globalApiFetch';
 
-
-const apiUrl = 'https://school.web.astrosoftware.com.np/api/v1/'
-const apiKey = 'p2yrhocea##)+87ob2#=$8&hs+@yh0dtr^nxeoq$tjug%se4fl'
-const samanyaGyanUrl = 'samanya-gyan'
-const loksewaUrl = 'categories'
 
 export const metadata = {
     title: 'This is Home Page',
@@ -21,63 +17,12 @@ interface Props {
     children: React.ReactNode
 }
 
-
-interface Loksewa {
-    id: number,
-    title: string,
-}
-
-async function getLoksweaData() {
-
-    try {
-        const response = await fetch(`${apiUrl}${loksewaUrl}`, {
-            headers: {
-                'Api-Key': apiKey,
-            },
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return await response.json();
-
-    } catch (error: any) {
-        console.error('Error fetching Loksewa:', error.message);
-        throw error;
-    }
-}
-
-interface SamanyaGyan {
-    id: number,
-    title: string,
-    language: string,
-    count: number,
-    nepalId: number,
-    globalId: number,
-}
-
-async function getSamanyaGyanData() {
-    try {
-        const response = await fetch(`${apiUrl}${samanyaGyanUrl}`, {
-            headers: {
-                'Api-Key': apiKey,
-            },
-        });
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return await response.json();
-
-    } catch (error: any) {
-        console.error('Error fetching SamanyaGyan:', error.message);
-        throw error;
-    }
-}
-
-
 export default async function RootLayout({children}: Props) {
-    const samanyaGyanDatas: Array<SamanyaGyan> = await getSamanyaGyanData();
-    const LoksewaDatas: Array<Loksewa> = await getLoksweaData();
+
+    const [samanyaGyanDatas, LoksewaDatas] = await Promise.all([
+        getSamanyaGyanData(),
+        getLokSewaData(),
+    ]);
 
     return (
         <>
