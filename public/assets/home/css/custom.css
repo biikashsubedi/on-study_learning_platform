@@ -1,0 +1,64 @@
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-content {
+    position: absolute;
+    top: 25px !important;
+    left: -38px !important;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    z-index: 20;
+    color: blue;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 5px 5px red;
+    padding: 15px;
+    text-align: right !important;
+    font-size: 13px !important;
+    line-height: 25px;
+    cursor: pointer;
+    white-space: normal;
+}
+
+.my-button:hover {
+    background-color: #2980b9;
+}
+
+.get-the-app-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.center-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.get-the-app-lazada-qr {
+    max-width: 150px;
+    height: auto;
+}
+
+.get-the-app-promotion {
+    display: flex;
+    align-items: center;
+}
+
+.promotion-text {
+    margin-left: 10px;
+}
+
+.app-stores {
+    display: flex;
+    align-items: center;
+}
+
+.app-stores img {
+    max-height: 40px;
+    margin-right: 10px;
+}

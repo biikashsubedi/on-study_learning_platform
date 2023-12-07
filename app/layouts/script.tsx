@@ -38,12 +38,22 @@ export default function ScriptJS() {
 
                 $('.testimonial-carousel').trigger('to.owl.carousel', [dotIndex * itemsToMove, 300, true]);
             });
+
+            const template = document.getElementById('tooltip-content');
+            // @ts-ignore
+            tippy('button', {
+                theme: 'light-border',
+                // @ts-ignore
+                content: template.innerHTML,
+            });
         });
     }, []); // Empty dependency array ensures the effect runs once when the component mounts
 
 
     return (
         <>
+            <script src="https://unpkg.com/popper.js@1"></script>
+            <script src="https://unpkg.com/tippy.js@5"></script>
             <Script src="https://code.jquery.com/jquery-3.6.4.min.js" strategy="beforeInteractive"/>
             <Script src="/assets/home/js/bootstrap.bundle.min.js" strategy="afterInteractive"/>
             <Script src="/assets/home/js/bootstrap-select.min.js" strategy="afterInteractive"/>

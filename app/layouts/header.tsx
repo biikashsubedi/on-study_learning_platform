@@ -123,7 +123,7 @@ export default async function Index({data}) {
                                         <ul>
                                             <li>
                                                 <a href="#">Categories
-                                                <i className="la la-angle-down fs-12"></i></a>
+                                                    <i className="la la-angle-down fs-12"></i></a>
                                                 <ul className="cat-dropdown-menu">
                                                     {samanyaGyanDatas.data.map((item: SamanyaGyan, index: number) => (
                                                         <li><a href="#">{item.title}</a></li>
@@ -161,11 +161,54 @@ export default async function Index({data}) {
                                         </ul>
                                     </nav>
                                     <div className="nav-right-button">
-                                        <a href="#"
-                                           className="btn theme-btn d-none d-lg-inline-block">
-                                            <i className="la la-mobile-phone mr-1"></i>
-                                            Get Mobile App
-                                        </a>
+                                        <div className="tooltip-container">
+                                            <button className="button btn theme-btn d-none d-lg-inline-block"><i
+                                                className="la la-mobile-phone mr-1"></i>
+                                                Get Mobile App
+                                            </button>
+                                            <div className="tooltip-content" id="tooltip-content">
+
+                                                <div className="lzd-download-popup top-popup-wrap"
+                                                     id="lzdDownloadPopup">
+                                                    <div className="top-popup-content lzd-download-content">
+                                                        <div className="get-the-app-scope">
+                                                            <div className="get-the-app">
+                                                                <div className="center-img-holder"><img
+                                                                    className="center-img"
+                                                                    src="//icms-image.slatic.net/images/ims-web/34d8863d-547e-4bd7-ba41-5fd7022366de.png"
+                                                                    alt=""/>
+                                                                </div>
+                                                                <div
+                                                                    className="get-the-app-title text-center mt-3">Download
+                                                                    the App
+                                                                </div>
+                                                                <hr/>
+
+                                                                <div className="get-the-app-promotion">
+                                                                    <div className="get-the-app-lazada-qr-wrap">
+                                                                        <img className="get-the-app-lazada-qr"
+                                                                             src="//icms-image.slatic.net/images/ims-web/b1bacff9-3e2b-4fd5-9b7b-854f42048c23.png"
+                                                                             alt=""/>
+                                                                    </div>
+
+                                                                    <div className="promotion-text">
+                                                                        <div className="app-stores">
+                                                                            <a href="//play.google.com/store/apps/details?id=com.daraz.android&amp;scm=1003.4.icms-zebra-100024132-6852845.OTHER_6502454496_7721167"
+                                                                               className="store-link">
+                                                                                <img width="auto" height="40"
+                                                                                     src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                                                                                     alt=""/>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
