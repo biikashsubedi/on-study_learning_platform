@@ -1,6 +1,70 @@
+"use client";
 
 import Link from 'next/link'
-export default function Index() {
+
+const apiUrl = 'https://school.web.astrosoftware.com.np/api/v1/'
+const apiKey = 'p2yrhocea##)+87ob2#=$8&hs+@yh0dtr^nxeoq$tjug%se4fl'
+const samanyaGyanUrl = 'samanya-gyan'
+const loksewaUrl = 'categories'
+
+
+interface Loksewa {
+    id: number,
+    title: string,
+}
+
+async function getLoksweaData() {
+
+    try {
+        const response = await fetch(`${apiUrl}${loksewaUrl}`, {
+            headers: {
+                'Api-Key': apiKey,
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return await response.json();
+
+    } catch (error: any) {
+        console.error('Error fetching Loksewa:', error.message);
+        throw error;
+    }
+}
+
+interface SamanyaGyan {
+    id: number,
+    title: string,
+    language: string,
+    count: number,
+    nepalId: number,
+    globalId: number,
+}
+
+async function getSamanyaGyanData() {
+    try {
+        const response = await fetch(`${apiUrl}${samanyaGyanUrl}`, {
+            headers: {
+                'Api-Key': apiKey,
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return await response.json();
+
+    } catch (error: any) {
+        console.error('Error fetching SamanyaGyan:', error.message);
+        throw error;
+    }
+}
+
+export default async function Index() {
+
+    const samanyaGyanDatas: Array<SamanyaGyan> = await getSamanyaGyanData();
+    const LoksewaDatas: Array<Loksewa> = await getLoksweaData();
+
     return (
         <header className="header-menu-area bg-white">
             <div className="header-top pr-150px pl-150px border-bottom border-bottom-gray py-1">
@@ -78,7 +142,7 @@ export default function Index() {
                             <div className="col-lg-2">
                                 <div className="logo-box">
                                     <Link href="/" className="logo">
-                                        <img src="/assets/home/images/8.png" width={140} height={41} alt="logo"></img>
+                                        <img src="/assets/home/images/5.png" width={140} height={41} alt="logo"></img>
                                     </Link>
                                     <div className="user-btn-action">
                                         <div
@@ -102,31 +166,30 @@ export default function Index() {
                                         <ul>
                                             <li>
                                                 <a href="#">Categories
+
+
                                                     <i className="la la-angle-down fs-12"></i></a>
                                                 <ul className="cat-dropdown-menu">
-                                                    <li><a href="#">History</a></li>
-                                                    <li><a href="#">Sports</a></li>
-                                                    <li><a href="#">geography</a></li>
+                                                    {samanyaGyanDatas.data.map((item: SamanyaGyan, index: number) => (
+                                                        <li><a href="#">{item.title}</a></li>
+                                                    ))}
+
                                                     <hr></hr>
                                                     <li>
                                                         <a href="#">LokSewa
                                                             <i className="la la-angle-right"></i></a>
                                                         <ul className="sub-menu">
+
                                                             <li>
                                                                 <a href="#">All</a>
                                                             </li>
+                                                            {LoksewaDatas.data.map((item: Loksewa, index: number) => (
+
+
                                                             <li>
-                                                                <a href="#">Nepal Health</a>
+                                                                <a href="#">{item.title}</a>
                                                             </li>
-                                                            <li>
-                                                                <a href="#">Computer Operator</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">Banking Sector</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">Nepal Police</a>
-                                                            </li>
+                                                            ))}
                                                         </ul>
                                                     </li>
                                                 </ul>

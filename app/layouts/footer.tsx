@@ -12,7 +12,7 @@ export default function Index() {
                     <div className="col-lg-3 responsive-column-half">
                         <div className="footer-item">
                             <Link href="/">
-                                <img src="/assets/home/images/8.png" alt="footer logo" width={140} height={41} className="footer__logo"/>
+                                <img src="/assets/home/images/5.png" alt="footer logo" width={140} height={41} className="footer__logo"/>
 
                             </Link>
                             <ul className="generic-list-item pt-4">
