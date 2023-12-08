@@ -5,7 +5,7 @@ import Script from './layouts/script';
 import Footer from './layouts/footer';
 import ScrollTop from './layouts/scroll-top';
 import NextTopLoader from 'nextjs-toploader';
-import {getLokSewaData, getSamanyaGyanData} from './utils/globalApiFetch';
+import {getLokSewaData, getSamanyaGyanData, getBlogCategoryData} from './utils/globalApiFetch';
 
 
 export const metadata = {
@@ -19,9 +19,10 @@ interface Props {
 
 export default async function RootLayout({children}: Props) {
 
-    const [samanyaGyanDatas, LoksewaDatas] = await Promise.all([
+    const [samanyaGyanDatas, LoksewaDatas, blogCategories] = await Promise.all([
         getSamanyaGyanData(),
         getLokSewaData(),
+        getBlogCategoryData(),
     ]);
 
     return (
@@ -33,7 +34,7 @@ export default async function RootLayout({children}: Props) {
             <body className="light-theme">
             <NextTopLoader color="red"/>
 
-            <Header data={{LoksewaDatas, samanyaGyanDatas}}/>
+            <Header data={{LoksewaDatas, samanyaGyanDatas, blogCategories}}/>
 
             {children}
 

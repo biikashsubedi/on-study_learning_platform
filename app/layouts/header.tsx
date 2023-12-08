@@ -16,10 +16,19 @@ interface Loksewa {
     title: string,
 }
 
+interface BlogCategory {
+    title: string,
+    slug: string,
+    child_categories: {
+        title: string,
+        slug: string
+    },
+}
+
 // @ts-ignore
 export default async function Index({data}) {
 
-    const {LoksewaDatas, samanyaGyanDatas} = data;
+    const {LoksewaDatas, samanyaGyanDatas, blogCategories} = data;
 
     return (
         <header className="header-menu-area bg-white">
@@ -128,44 +137,41 @@ export default async function Index({data}) {
                                                         className="la la-angle-down fs-12"></i></a>
                                                     <div className="dropdown-menu-item mega-menu">
                                                         <ul className="row no-gutters">
-                                                            <li className="col-lg-3">
-                                                                <a href="/" className="font-weight-bold">dashboard <span
-                                                                    className="ribbon">Hot</span></a>
-                                                                <hr/>
-                                                                <a href="#">about</a>
-                                                                <a href="#">about</a>
-                                                            </li>
-                                                            <li className="col-lg-3">
-                                                                <a href="/" className="font-weight-bold">dashboard</a>
-                                                                <hr/>
-                                                                <a href="#">about</a>
-                                                                <a href="#">about</a>
-                                                            </li>
-                                                            <li className="col-lg-3">
-                                                                <a href="/" className="font-weight-bold">dashboard</a>
-                                                                <hr/>
-                                                                <a href="#">about</a>
-                                                                <a href="#">about</a>
-                                                            </li>
-                                                            <li className="col-lg-3">
-                                                                <div className="menu-banner position-relative h-100">
-                                                                    <div
-                                                                        className="overlay rounded-rounded opacity-4"></div>
-                                                                    <div
-                                                                        className="menu-banner-content p-4 position-absolute bottom-0 left-0">
-                                                                        <h4 className="fs-20 font-weight-bold pb-3 text-white">Best
-                                                                            Platform To Learn !</h4>
-                                                                        <a href="#"
-                                                                           className="btn theme-btn theme-btn-sm theme-btn-white">Start
-                                                                            Now <i
-                                                                                className="la la-arrow-right icon ml-1"></i></a>
-                                                                    </div>
-                                                                    <img
-                                                                        src="/assets/home/images/laptop.png"
-                                                                        alt="menu banner image"
-                                                                        className="w-100 h-100 rounded-rounded"/>
-                                                                </div>
-                                                            </li>
+                                                            {blogCategories.data.map((item: BlogCategory, index: number) => (
+
+                                                                <>
+                                                                    <li className="col-lg-2">
+                                                                        <a href="/"
+                                                                           className="font-weight-bold">{item.title} </a>
+                                                                        <hr/>
+                                                                        {item.child_categories.map((item1: BlogCategory, index: number) => (
+                                                                            <a href="#">{item1.title}
+                                                                                <span className="ribbon">Hot</span></a>
+                                                                        ))}
+                                                                    </li>
+                                                                </>
+                                                            ))}
+                                                            {/*<li className="col-lg-3">*/}
+                                                            {/*    <div*/}
+                                                            {/*        className="menu-banner position-relative h-100">*/}
+                                                            {/*        <div*/}
+                                                            {/*            className="overlay rounded-rounded opacity-4"></div>*/}
+                                                            {/*        <div*/}
+                                                            {/*            className="menu-banner-content p-4 position-absolute bottom-0 left-0">*/}
+                                                            {/*            <h4 className="fs-20 font-weight-bold pb-3 text-white">Best*/}
+                                                            {/*                Platform To Learn !</h4>*/}
+                                                            {/*            <a href="#"*/}
+                                                            {/*               className="btn theme-btn theme-btn-sm theme-btn-white">Start*/}
+                                                            {/*                Now <i*/}
+                                                            {/*                    className="la la-arrow-right icon ml-1"></i></a>*/}
+                                                            {/*        </div>*/}
+                                                            {/*        <img*/}
+                                                            {/*            src="/assets/home/images/laptop.png"*/}
+                                                            {/*            alt="menu banner image"*/}
+                                                            {/*            className="w-100 h-100 rounded-rounded"/>*/}
+                                                            {/*    </div>*/}
+                                                            {/*</li>*/}
+
                                                         </ul>
                                                     </div>
                                                 </li>

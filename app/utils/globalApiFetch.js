@@ -3,6 +3,7 @@ const apiKey = 'p2yrhocea##)+87ob2#=$8&hs+@yh0dtr^nxeoq$tjug%se4fl'
 const samanyaGyanUrl = 'samanya-gyan'
 const lokSewaUrl = 'categories'
 const blogUrl = 'blog'
+const blogCategoryUrl = 'blog/categories'
 
 // Getting lock sewa data from api
 export async function getLokSewaData() {
@@ -59,6 +60,24 @@ export async function getBlogData() {
 
     } catch (error) {
         console.error('Error fetching blogs:', error.message);
+        throw error;
+    }
+}
+// Getting blog category data from api
+export async function getBlogCategoryData() {
+    try {
+        const response = await fetch(`${apiUrl}${blogCategoryUrl}`, {
+            headers: {
+                'Api-Key': apiKey,
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return await response.json();
+
+    } catch (error) {
+        console.error('Error fetching blog categories:', error.message);
         throw error;
     }
 }
