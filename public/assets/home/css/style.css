@@ -7057,7 +7057,7 @@ div.datedropper .picker .pick-lg-b li {
 
 .main-menu > ul > li .mega-menu {
     top: 95px;
-    width: 100%;
+    /*width: 100%;*/
     padding-top: 0;
     padding-bottom: 0
 }

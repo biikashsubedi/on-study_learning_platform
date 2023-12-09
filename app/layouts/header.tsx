@@ -30,7 +30,6 @@ export default async function Index({data}) {
 
     const {LoksewaDatas, samanyaGyanDatas, blogCategories} = data;
 
-    // @ts-ignore
     return (
         <header className="header-menu-area bg-white">
             <div className="header-top pr-150px pl-150px border-bottom border-bottom-gray py-1">
@@ -136,42 +135,44 @@ export default async function Index({data}) {
                                                 <li className="mega-menu-has">
                                                     <a href="/blog">Blogs <i
                                                         className="la la-angle-down fs-12"></i></a>
-                                                    <div className="dropdown-menu-item mega-menu">
+                                                    <div className="dropdown-menu-item mega-menu"
+                                                         style={{maxWidth: '110%', width:'95%'}}>
                                                         <ul className="row no-gutters">
                                                             {blogCategories.data.map((item: BlogCategory, index: number) => (
-
                                                                 <>
-                                                                    <li className="col-lg-2">
-                                                                        <a href="/"
+                                                                    <li className="col-lg-1.5">
+                                                                        <a key={index} href="/"
                                                                            className="font-weight-bold">{item.title} </a>
                                                                         <hr/>
-                                                                        {item.child_categories.map((item1: BlogCategory, index: number) => (
-                                                                            <a href="#">{item1.title}
-                                                                                <span className="ribbon">Hot</span></a>
-                                                                        ))}
+                                                                        {// @ts-ignore
+                                                                            item.child_categories.map((item1: BlogCategory, index1: number) => (
+                                                                                <a key={index1} href="#">{item1.title}
+                                                                                    <span className="ribbon">Hot</span></a>
+                                                                            ))}
                                                                     </li>
                                                                 </>
                                                             ))}
-                                                            {/*<li className="col-lg-3">*/}
-                                                            {/*    <div*/}
-                                                            {/*        className="menu-banner position-relative h-100">*/}
-                                                            {/*        <div*/}
-                                                            {/*            className="overlay rounded-rounded opacity-4"></div>*/}
-                                                            {/*        <div*/}
-                                                            {/*            className="menu-banner-content p-4 position-absolute bottom-0 left-0">*/}
-                                                            {/*            <h4 className="fs-20 font-weight-bold pb-3 text-white">Best*/}
-                                                            {/*                Platform To Learn !</h4>*/}
-                                                            {/*            <a href="#"*/}
-                                                            {/*               className="btn theme-btn theme-btn-sm theme-btn-white">Start*/}
-                                                            {/*                Now <i*/}
-                                                            {/*                    className="la la-arrow-right icon ml-1"></i></a>*/}
-                                                            {/*        </div>*/}
-                                                            {/*        <img*/}
-                                                            {/*            src="/assets/home/images/laptop.png"*/}
-                                                            {/*            alt="menu banner image"*/}
-                                                            {/*            className="w-100 h-100 rounded-rounded"/>*/}
-                                                            {/*    </div>*/}
-                                                            {/*</li>*/}
+
+                                                            <li className="col-lg-2">
+                                                                <div
+                                                                    className="menu-banner position-relative h-100">
+                                                                    <div
+                                                                        className="overlay rounded-rounded opacity-4"></div>
+                                                                    <div
+                                                                        className="menu-banner-content p-4 position-absolute bottom-0 left-0">
+                                                                        <h4 className="fs-20 font-weight-bold pb-3 text-white">Contribute
+                                                                            by Posting Article</h4>
+                                                                        <a href="#"
+                                                                           className="btn theme-btn theme-btn-sm theme-btn-white">Get
+                                                                            Started
+                                                                            <i className="la la-arrow-right icon ml-1"></i></a>
+                                                                    </div>
+                                                                    <img
+                                                                        src="/assets/home/images/laptop.png"
+                                                                        alt="menu banner image"
+                                                                        className="w-100 h-100 rounded-rounded"/>
+                                                                </div>
+                                                            </li>
 
                                                         </ul>
                                                     </div>
