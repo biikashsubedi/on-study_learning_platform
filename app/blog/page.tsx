@@ -1,13 +1,14 @@
 import Link from "next/link"
 import {getBlogCategoryData, getBlogData} from '../utils/globalApiFetch';
-import {indentRecursive} from "tailwindcss/src/oxide/cli/build/utils";
+import {it} from "node:test";
 
 
 interface Blog {
     id: number,
     title: string,
     slug: string,
-    image: string
+    image: string,
+    short_description: string
 }
 
 interface BlogCategory {
@@ -62,7 +63,7 @@ export default async function Home() {
                                                 <Link href={`/blog/${encodeURIComponent(item.slug)}`}
                                                       className="d-block">
                                                     <img className="card-img-top lazy"
-                                                         src="/assets/home/images/img8.jpg" alt="Card image cap"/>
+                                                         src={item.image} alt="Card image cap"/>
                                                 </Link>
                                                 <div className="course-badge-labels">
                                                     <div className="course-badge">Jan 24, 2020</div>
@@ -73,6 +74,7 @@ export default async function Home() {
                                                 <h5 className="card-title"><a
                                                     href={`/blog/${encodeURIComponent(item.slug)}`}>{item.title}</a>
                                                 </h5>
+                                                <p style={{textAlign: 'justify'}}>{item.short_description && item.short_description.length > 140 ? `${item.short_description.slice(0, 140)}...` : item.short_description}</p>
                                                 <ul className="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center flex-wrap fs-14 pt-2">
                                                     <li className="d-flex align-items-center">By<Link
                                                         href={`/blog/${encodeURIComponent(item.slug)}`}>Admin</Link>

@@ -63,6 +63,26 @@ export async function getBlogData() {
         throw error;
     }
 }
+
+// Getting blog data from api
+export async function getBlogBySlug(slug) {
+    try {
+        const response = await fetch(`${apiUrl}${blogUrl}/${slug}`, {
+            headers: {
+                'Api-Key': apiKey,
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return await response.json();
+
+    } catch (error) {
+        console.error('Error fetching blogs:', error.message);
+        throw error;
+    }
+}
+
 // Getting blog category data from api
 export async function getBlogCategoryData() {
     try {
