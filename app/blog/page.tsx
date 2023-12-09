@@ -35,14 +35,14 @@ export default async function Home() {
                 <div className="container">
                     <div className="breadcrumb-content d-flex flex-wrap align-items-center justify-content-between">
                         <div className="section-heading">
-                            <h2 className="section__title text-white">Hamro Blog</h2>
+                            <h2 className="section__title text-white">Blog</h2>
                         </div>
                         <ul className="generic-list-item generic-list-item-white generic-list-item-arrow d-flex flex-wrap align-items-center">
                             <li><Link
                                 href="/">Home</Link>
                             </li>
                             <li><Link href="/blog"> Blog</Link></li>
-                            <li>Aakash ko Blog</li>
+                            <li>All Blog</li>
                         </ul>
                     </div>
 
@@ -248,44 +248,6 @@ export default async function Home() {
                                                 <p className="text-black font-weight-semi-bold lh-18 fs-15">$12.99 <span
                                                     className="before-price fs-14">$129.99</span></p>
                                             </div>
-                                        </div>
-
-                                        <div className="media media-card border-bottom border-bottom-gray pb-4 mb-4">
-                                            <a href="#"
-                                               className="media-img">
-                                                <img className="mr-3"
-                                                     src="/assets/home/images/img8.jpg"
-                                                     alt="Related course image"/>
-                                            </a>
-                                            <div className="media-body">
-                                                <h5 className="fs-15"><a
-                                                    href="#">Learning
-                                                    jQuery Mobile for Beginners</a></h5>
-                                                <span className="d-block lh-18 py-1 fs-14">Kamran Ahmed</span>
-                                                <p className="text-black font-weight-semi-bold lh-18 fs-15">$129.99</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="media media-card border-bottom border-bottom-gray pb-4 mb-4">
-                                            <a href="#"
-                                               className="media-img">
-                                                <img className="mr-3"
-                                                     src="/assets/home/images/img8.jpg"
-                                                     alt="Related course image"/>
-                                            </a>
-                                            <div className="media-body">
-                                                <h5 className="fs-15"><a
-                                                    href="#">Introduction
-                                                    LearnPress – LMS plugin</a></h5>
-                                                <span className="d-block lh-18 py-1 fs-14">Kamran Ahmed</span>
-                                                <p className="text-black font-weight-semi-bold lh-18 fs-15">Free</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="view-all-course-btn-box">
-                                            <a href="#"
-                                               className="btn theme-btn w-100">View All Posts <i
-                                                className="la la-arrow-right icon ml-1"></i></a>
                                         </div>
                                     </div>
                                 </div>
