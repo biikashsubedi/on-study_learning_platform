@@ -30,6 +30,7 @@ export default async function Index({data}) {
 
     const {LoksewaDatas, samanyaGyanDatas, blogCategories} = data;
 
+    // @ts-ignore
     return (
         <header className="header-menu-area bg-white">
             <div className="header-top pr-150px pl-150px border-bottom border-bottom-gray py-1">
