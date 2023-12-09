@@ -1,6 +1,7 @@
 // "use client";
 
 import Link from 'next/link'
+import {it} from "node:test";
 
 interface SamanyaGyan {
     id: number,
@@ -141,13 +142,13 @@ export default async function Index({data}) {
                                                             {blogCategories.data.map((item: BlogCategory, index: number) => (
                                                                 <>
                                                                     <li className="col-lg-1.5">
-                                                                        <a key={index} href="/"
-                                                                           className="font-weight-bold">{item.title} </a>
+                                                                        <Link key={index} href={`/blog/type/${item.slug}`}
+                                                                           className="font-weight-bold">{item.title} </Link>
                                                                         <hr/>
                                                                         {// @ts-ignore
-                                                                            item.child_categories.map((item1: BlogCategory, index1: number) => (
-                                                                                <a key={index1} href="#">{item1.title}
-                                                                                    <span className="ribbon">Hot</span></a>
+                                                                            item.child_categories.map((child: BlogCategory, index1: number) => (
+                                                                                <Link key={index1} href={`/blog/type/${item.slug}/${child.slug}`}>{child.title}
+                                                                                    <span className="ribbon">Hot</span></Link>
                                                                             ))}
                                                                     </li>
                                                                 </>

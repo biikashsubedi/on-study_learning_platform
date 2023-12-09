@@ -101,3 +101,21 @@ export async function getBlogCategoryData() {
         throw error;
     }
 }
+// Getting blog category data from api
+export async function getBlogChildCategoryDataBySlug(slug) {
+    try {
+        const response = await fetch(`${apiUrl}${blogCategoryUrl}/${slug}`, {
+            headers: {
+                'Api-Key': apiKey,
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return await response.json();
+
+    } catch (error) {
+        console.error('Error fetching blog categories:', error.message);
+        throw error;
+    }
+}

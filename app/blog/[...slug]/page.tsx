@@ -1,6 +1,6 @@
 'use client' //this is like a debug
 import Link from "next/link";
-import {getBlogBySlug} from '../../utils/globalApiFetch';
+import {getBlogBySlug} from '@/app/utils/globalApiFetch';
 
 
 interface BlogPros {
