@@ -62,6 +62,7 @@ export default async function Home({params}: BlogPros) {
                 <span className="ring-shape ring-shape-5"></span>
                 <span className="ring-shape ring-shape-6"></span>
                 <div className="container">
+
                     <div className="row pt-80px">
 
                         {blogChildCategories.data.map((item: Blog, index: number) => (
@@ -87,6 +88,10 @@ export default async function Home({params}: BlogPros) {
                         ))}
 
                     </div>
+
+                    {blogChildCategories.data.length === 0 ? (
+                        <p className='text-center'>No data available.</p>
+                    ) : ('')}
                 </div>
             </section>
 
