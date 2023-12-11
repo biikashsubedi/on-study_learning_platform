@@ -20,7 +20,7 @@ export default function Index() {
                             <ul className="generic-list-item pt-4">
                                 <li><a href="tel:+1631237884">+977 9869286303</a></li>
                                 <li><a href="tel:+1631237884">+977 9804131198</a></li>
-                                <li><a href="mailto:support@wbsite.com">nplearnt@gmail.com</a></li>
+                                <li><a href="mailto:support@wbsite.com">info@on-study.com</a></li>
                                 <li>Kathmandu, Nepal</li>
                             </ul>
                             <h3 className="fs-20 font-weight-semi-bold pt-2 pb-2">We are on</h3>

@@ -41,7 +41,7 @@ export default async function Index({data}) {
                                 <ul className="generic-list-item d-flex flex-wrap align-items-center fs-14">
                                     <li className="d-flex align-items-center"><i
                                         className="la la-envelope-o mr-1"></i><a
-                                        href="mailto:nplearnt@gmail.com"> nplearnt@gmail.com</a></li>
+                                        href="mailto:nplearnt@gmail.com"> info@on-study.com</a></li>
                                 </ul>
                             </div>
                         </div>
