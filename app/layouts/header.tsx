@@ -109,7 +109,7 @@ export default async function Index({data}) {
                             <div className="col-lg-2">
                                 <div className="logo-box">
                                     <Link href="/" className="logo">
-                                        <Image src="/assets/home/images/5.png" width={140} height={41}
+                                        <Image src={'/assets/home/images/5.png'} width={140} height={41}
                                                alt="logo"></Image>
                                     </Link>
                                     <div className="user-btn-action">

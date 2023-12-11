@@ -19,7 +19,7 @@ export default function Index({data}) {
                     <div className="container">
                         <div className="section-heading text-center">
                             <h5 className="ribbon ribbon-lg mb-2">Some Popular Blogs</h5>
-                            <h2 className="section__title">Visitor(&apos;)s also like to visit</h2>
+                            <h2 className="section__title">Visitor&apos;s also like to visit</h2>
                             <span className="section-divider"></span>
                         </div>
                         <div

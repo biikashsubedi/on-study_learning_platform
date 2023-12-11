@@ -1,11 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['school.web.astrosoftware.com.np'],
+        domains: ['school.web.astrosoftware.com.np', 'frontend.on-study.com'],
+        unoptimized: true,
     },
-    backendApiUrl: 'https://school.web.astrosoftware.com.np/api/v1/samanya-gyan',
-    backendApiKey: 'p2yrhocea##)+87ob2#=$8&hs+@yh0dtr^nxeoq$tjug%se4fl'
-
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
