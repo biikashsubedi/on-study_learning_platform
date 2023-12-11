@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Blog {
     id: number,
     title: string,
@@ -17,7 +19,7 @@ export default function Index({data}) {
                     <div className="container">
                         <div className="section-heading text-center">
                             <h5 className="ribbon ribbon-lg mb-2">Some Popular Blogs</h5>
-                            <h2 className="section__title">Visitor's also like to visit</h2>
+                            <h2 className="section__title">Visitor(&apos;)s also like to visit</h2>
                             <span className="section-divider"></span>
                         </div>
                         <div
@@ -34,9 +36,10 @@ export default function Index({data}) {
                                             <div className="card-image">
                                                 <a href="#"
                                                    className="d-block">
-                                                    <img className="card-img-top lazy"
-                                                         src="/assets/home/images/img8.jpg"
-                                                         data-src="/assets/home/images/img8.jpg" alt="Card image cap"/>
+                                                    <Image width={400} height={300} className="card-img-top lazy"
+                                                           src="/assets/home/images/img8.jpg"
+                                                           data-src="/assets/home/images/img8.jpg"
+                                                           alt="Card image cap"/>
                                                 </a>
                                             </div>
                                             <div className="card-body">
@@ -72,9 +75,10 @@ export default function Index({data}) {
                                             <div className="card-image">
                                                 <a href="#"
                                                    className="d-block">
-                                                    <img className="card-img-top lazy"
-                                                         src="/assets/home/images/img8.jpg"
-                                                         data-src="/assets/home/images/img8.jpg" alt="Card image cap"/>
+                                                    <Image width={400} height={300} className="card-img-top lazy"
+                                                           src="/assets/home/images/img8.jpg"
+                                                           data-src="/assets/home/images/img8.jpg"
+                                                           alt="Card image cap"/>
                                                 </a>
                                                 <div className="course-badge-labels">
                                                     <div className="course-badge">Featured</div>
@@ -113,9 +117,10 @@ export default function Index({data}) {
                                             <div className="card-image">
                                                 <a href="#"
                                                    className="d-block">
-                                                    <img className="card-img-top lazy"
-                                                         src="/assets/home/images/img8.jpg"
-                                                         data-src="/assets/home/images/img8.jpg" alt="Card image cap"/>
+                                                    <Image width={400} height={300} className="card-img-top lazy"
+                                                           src="/assets/home/images/img8.jpg"
+                                                           data-src="/assets/home/images/img8.jpg"
+                                                           alt="Card image cap"/>
                                                 </a>
                                                 <div className="course-badge-labels">
                                                     <div className="course-badge">Featured</div>
@@ -150,15 +155,15 @@ export default function Index({data}) {
                                         </div>
                                     </div>
                                     {blogs.data.map((item: Blog, index: number) => (
-                                        <div className="owl-item active" style={{width: '370px', marginRight: '30px'}}>
+                                        <div key={index} className="owl-item active" style={{width: '370px', marginRight: '30px'}}>
                                             <div className="card card-item card-preview tooltipstered">
                                                 <div className="card-image">
                                                     <a href="#"
                                                        className="d-block">
-                                                        <img className="card-img-top lazy"
-                                                             src={item.image}
-                                                             data-src="/assets/home/images/img8.jpg"
-                                                             alt="Card image cap"/>
+                                                        <Image width={400} height={300} className="card-img-top lazy"
+                                                               src={item.image}
+                                                               data-src="/assets/home/images/img8.jpg"
+                                                               alt="Card image cap"/>
                                                     </a>
                                                     <div className="course-badge-labels">
                                                         <div className="course-badge">Bestseller</div>

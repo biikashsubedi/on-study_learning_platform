@@ -52,8 +52,8 @@ export default function ScriptJS() {
 
     return (
         <>
-            <script src="https://unpkg.com/popper.js@1"></script>
-            <script src="https://unpkg.com/tippy.js@5"></script>
+            <Script src="https://unpkg.com/popper.js@1" strategy="beforeInteractive"></Script>
+            <Script src="https://unpkg.com/tippy.js@5" strategy="beforeInteractive"></Script>
             <Script src="https://code.jquery.com/jquery-3.6.4.min.js" strategy="beforeInteractive"/>
             <Script src="/assets/home/js/bootstrap.bundle.min.js" strategy="afterInteractive"/>
             <Script src="/assets/home/js/bootstrap-select.min.js" strategy="afterInteractive"/>

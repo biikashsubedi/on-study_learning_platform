@@ -1,6 +1,7 @@
 import Link from "next/link"
 import {getBlogChildCategoryDataBySlug} from '@/app/utils/globalApiFetch';
 import {it} from "node:test";
+import Image from "next/image";
 
 
 interface BlogPros {
@@ -72,7 +73,7 @@ export default async function Home({params}: BlogPros) {
                                          style={{boxShadow: '0px 0px 4px 2px #3eaae5, 0px 0px 6px 2px #68fddf, 0px 0px 8px 6px #0fbd47'}}>
                                         <div className="card-body d-flex align-items-center">
                                             <div className="flex-shrink-0 avatar-lg">
-                                                <img src="/assets/home/images/img8.jpg" alt="card image"
+                                                <Image width={100} height={100} src="/assets/home/images/img8.jpg" alt="card image"
                                                      className="w-100 rounded-full shadow-sm"/>
                                             </div>
                                             <div className="pl-4">

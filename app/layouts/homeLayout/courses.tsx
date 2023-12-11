@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Index() {
     return (
         <>
@@ -48,9 +50,10 @@ export default function Index() {
                                             <div className="card-image">
                                                 <a href="#"
                                                    className="d-block">
-                                                    <img className="card-img-top lazy"
-                                                         src="/assets/home/images/img8.jpg"
-                                                         data-src="/assets/home/images/img8.jpg" alt="Card image cap"/>
+                                                    <Image width={400} height={300} className="card-img-top lazy"
+                                                           src="/assets/home/images/img8.jpg"
+                                                           data-src="/assets/home/images/img8.jpg"
+                                                           alt="Card image cap"/>
                                                 </a>
                                                 <div className="course-badge-labels">
                                                     <div className="course-badge">Bestseller</div>
@@ -96,9 +99,9 @@ export default function Index() {
                                             <div className="card-image">
                                                 <a href="#"
                                                    className="d-block">
-                                                    <img className="card-img-top lazy"
-                                                         src="/assets/home/images/img8.jpg"
-                                                         alt="Card image cap"/>
+                                                    <Image width={400} height={300} className="card-img-top lazy"
+                                                           src="/assets/home/images/img8.jpg"
+                                                           alt="Card image cap"/>
                                                 </a>
                                             </div>
                                             <div className="card-body">
@@ -140,8 +143,8 @@ export default function Index() {
                                             <div className="card-image">
                                                 <a href="#"
                                                    className="d-block">
-                                                    <img className="card-img-top lazy"
-                                                         src="/assets/home/images/img8.jpg" alt="Card image cap"
+                                                    <Image width={400} height={300} className="card-img-top lazy"
+                                                           src="/assets/home/images/img8.jpg" alt="Card image cap"
                                                     />
                                                 </a>
                                                 <div className="course-badge-labels">
@@ -188,9 +191,9 @@ export default function Index() {
                                             <div className="card-image">
                                                 <a href="#"
                                                    className="d-block">
-                                                    <img className="card-img-top lazy"
-                                                         src="/assets/home/images/img8.jpg"
-                                                         alt="Card image cap"/>
+                                                    <Image width={400} height={300} className="card-img-top lazy"
+                                                           src="/assets/home/images/img8.jpg"
+                                                           alt="Card image cap"/>
                                                 </a>
                                             </div>
                                             <div className="card-body">
@@ -232,9 +235,9 @@ export default function Index() {
                                             <div className="card-image">
                                                 <a href="#"
                                                    className="d-block">
-                                                    <img className="card-img-top lazy"
-                                                         src="/assets/home/images/img8.jpg"
-                                                         alt="Card image cap"/>
+                                                    <Image width={400} height={300} className="card-img-top lazy"
+                                                           src="/assets/home/images/img8.jpg"
+                                                           alt="Card image cap"/>
                                                 </a>
                                                 <div className="course-badge-labels">
                                                     <div className="course-badge">Bestseller</div>

@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import {it} from "node:test";
 
 const apiUrl = 'https://school.web.astrosoftware.com.np/api/v1/'
@@ -29,7 +29,7 @@ export default async function Index({data}) {
 
                         {samanyaGyanDatas.data.map((item: SamanyaGyan, index: number) => (
 
-                            <div className="col-lg-3 responsive-column-half">
+                            <div key={index} className="col-lg-3 responsive-column-half">
                                 <div className="info-box">
                                     <div className="info-overlay"></div>
                                     <div className="icon-element mx-auto shadow-sm">

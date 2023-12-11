@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link"
+import Image from "next/image";
 
 
 export default function Index() {
@@ -12,7 +13,8 @@ export default function Index() {
                     <div className="col-lg-3 responsive-column-half">
                         <div className="footer-item">
                             <Link href="/">
-                                <img src="/assets/home/images/5.png" alt="footer logo" width={140} height={41} className="footer__logo"/>
+                                <Image src="/assets/home/images/5.png" alt="footer logo" width={140} height={41}
+                                       className="footer__logo"/>
 
                             </Link>
                             <ul className="generic-list-item pt-4">
@@ -68,9 +70,11 @@ export default function Index() {
                             <span className="section-divider section--divider"></span>
                             <div className="mobile-app">
                                 <p className="pb-3 lh-24">Download our mobile app and learn on the go.</p>
-                                <a href="#" className="d-block hover-s"><img src="/assets/home/images/googleplay.png"
-                                                                             alt="Google play store"
-                                                                             className="img-fluid"/></a>
+                                <a href="#" className="d-block hover-s">
+                                    <Image src="/assets/home/images/googleplay.png"
+                                           width={140} height={41}
+                                           alt="Google play store"
+                                           className="img-fluid"/></a>
                             </div>
                         </div>
                     </div>

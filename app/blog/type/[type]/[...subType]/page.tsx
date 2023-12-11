@@ -1,5 +1,6 @@
 import Link from "next/link"
 import {getBlogData} from '@/app/utils/globalApiFetch';
+import Image from "next/image";
 
 
 interface BlogPros {
@@ -64,12 +65,12 @@ export default async function Home({params}: BlogPros) {
                     <div className="row">
 
                         {blogs.data.slice(0, 10).map((item: Blog, index: number) => (
-                            <div className="col-lg-3">
+                            <div key={index} className="col-lg-3">
                                 <div className="card card-item">
                                     <div className="card-image">
                                         <a href="#" className="d-block">
-                                            <img className="card-img-top lazy" src={item.image}
-                                                 alt="Card image cap" height={300}/>
+                                            <Image className="card-img-top lazy" src={item.image}
+                                                   alt="Card image cap" width={400} height={300}/>
                                         </a>
                                         <div className="course-badge-labels">
                                             <div className="course-badge">Jan 24, 2020</div>

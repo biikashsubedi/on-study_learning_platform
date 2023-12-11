@@ -86,7 +86,7 @@ export async function getBlogBySlug(slug) {
 // Getting blog category data from api
 export async function getBlogCategoryData() {
     try {
-        const response = await fetch(`${apiUrl}${blogCategoryUrl}`, {
+        const response = await fetch(`${apiUrl}${blogCategoryUrl}/`, {
             headers: {
                 'Api-Key': apiKey,
             },
@@ -104,7 +104,7 @@ export async function getBlogCategoryData() {
 // Getting blog category data from api
 export async function getBlogChildCategoryDataBySlug(slug) {
     try {
-        const response = await fetch(`${apiUrl}${blogCategoryUrl}/${slug}/`, {
+        const response = await fetch(`${apiUrl}${blogCategoryUrl}/${slug}`, {
             headers: {
                 'Api-Key': apiKey,
             },

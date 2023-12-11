@@ -1,6 +1,6 @@
-'use client' //this is like a debug
 import Link from "next/link";
 import {getBlogBySlug} from '@/app/utils/globalApiFetch';
+import Image from "next/image";
 
 
 interface BlogPros {
@@ -54,12 +54,12 @@ export default async function Home({params}: BlogPros) {
                                         </div>
                                         <div className="col-lg-3">
                                             <div className="mt-3">
-                                                <img src={blog.data.image}
-                                                     alt="blog-img" className="img-fluid rounded-rounded lazy"/>
+                                                <Image width={400} height={300} src={blog.data.image}
+                                                       alt="blog-img" className="img-fluid rounded-rounded lazy"/>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className={'mb-4'} dangerouslySetInnerHTML={{ __html: blog.data.description }} />
+                                    <div className={'mb-4'} dangerouslySetInnerHTML={{__html: blog.data.description}}/>
 
                                     <div className="section-block"></div>
                                     <h3 className="fs-18 font-weight-semi-bold pt-3">Tags</h3>
@@ -97,8 +97,8 @@ export default async function Home({params}: BlogPros) {
                                 <h3 className="fs-22 font-weight-semi-bold pb-4">About the author</h3>
                                 <div className="media media-card">
                                     <div className="media-img rounded-full avatar-lg mr-4">
-                                        <img src="/assets/home/images/aakash_subedi.png"
-                                             alt="Avatar image" className="rounded-full lazy"/>
+                                        <Image width={400} height={300} src="/assets/home/images/aakash_subedi.png"
+                                               alt="Avatar image" className="rounded-full lazy"/>
                                     </div>
                                     <div className="media-body">
                                         <h5>Aakash Subedi</h5>
@@ -130,9 +130,9 @@ export default async function Home({params}: BlogPros) {
                                 <div className="comment-list">
                                     <div className="media media-card border-bottom border-bottom-gray pb-4 mb-4">
                                         <div className="media-img mr-4 rounded-full">
-                                            <img className="rounded-full lazy"
-                                                 src="/assets/home/images/bikash_subedi.png"
-                                                 alt="User image"/>
+                                            <Image width={400} height={300} className="rounded-full lazy"
+                                                   src="/assets/home/images/bikash_subedi.png"
+                                                   alt="User image"/>
                                         </div>
                                         <div className="media-body">
                                             <h5 className="pb-2">Bikash Subedi</h5>
@@ -247,9 +247,9 @@ export default async function Home({params}: BlogPros) {
                                         <div className="media media-card border-bottom border-bottom-gray pb-4 mb-4">
                                             <a href="#"
                                                className="media-img">
-                                                <img className="mr-3"
-                                                     src="/assets/home/images/img8.jpg"
-                                                     alt="Related course image"/>
+                                                <Image width={400} height={300} className="mr-3"
+                                                       src="/assets/home/images/img8.jpg"
+                                                       alt="Related course image"/>
                                             </a>
                                             <div className="media-body">
                                                 <h5 className="fs-15"><a
@@ -263,9 +263,9 @@ export default async function Home({params}: BlogPros) {
                                         <div className="media media-card border-bottom border-bottom-gray pb-4 mb-4">
                                             <a href="#"
                                                className="media-img">
-                                                <img className="mr-3"
-                                                     src="/assets/home/images/img8.jpg"
-                                                     alt="Related course image"/>
+                                                <Image width={400} height={300} className="mr-3"
+                                                       src="/assets/home/images/img8.jpg"
+                                                       alt="Related course image"/>
                                             </a>
                                             <div className="media-body">
                                                 <h5 className="fs-15"><a
@@ -278,9 +278,9 @@ export default async function Home({params}: BlogPros) {
                                         <div className="media media-card border-bottom border-bottom-gray pb-4 mb-4">
                                             <a href="#"
                                                className="media-img">
-                                                <img className="mr-3"
-                                                     src="/assets/home/images/img8.jpg"
-                                                     alt="Related course image"/>
+                                                <Image width={400} height={300} className="mr-3"
+                                                       src="/assets/home/images/img8.jpg"
+                                                       alt="Related course image"/>
                                             </a>
                                             <div className="media-body">
                                                 <h5 className="fs-15"><a

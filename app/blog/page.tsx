@@ -1,6 +1,7 @@
 import Link from "next/link"
 import {getBlogCategoryData, getBlogData} from '../utils/globalApiFetch';
 import {it} from "node:test";
+import Image from "next/image";
 
 
 interface Blog {
@@ -62,8 +63,8 @@ export default async function Home() {
                                             <div className="card-image">
                                                 <Link href={`/blog/${encodeURIComponent(item.slug)}`}
                                                       className="d-block">
-                                                    <img className="card-img-top lazy"
-                                                         src={item.image} alt="Card image cap"/>
+                                                    <Image width={400} height={300} className="card-img-top lazy"
+                                                           src={item.image} alt="Card image cap"/>
                                                 </Link>
                                                 <div className="course-badge-labels">
                                                     <div className="course-badge">Jan 24, 2020</div>
@@ -238,9 +239,9 @@ export default async function Home() {
                                         <div className="media media-card border-bottom border-bottom-gray pb-4 mb-4">
                                             <a href="#"
                                                className="media-img">
-                                                <img className="mr-3"
-                                                     src="/assets/home/images/img8.jpg"
-                                                     alt="Related course image"/>
+                                                <Image width={400} height={300} className="mr-3"
+                                                       src="/assets/home/images/img8.jpg"
+                                                       alt="Related course image"/>
                                             </a>
                                             <div className="media-body">
                                                 <h5 className="fs-15"><a

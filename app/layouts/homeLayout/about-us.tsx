@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Index() {
     return (
         <>
@@ -135,9 +137,9 @@ export default function Index() {
                         </div>
                         <div className="col-lg-5 ml-auto">
                             <div className="generic-img-box">
-                                <img src="/assets/home/images/img-loading.png" data-src="./files/img13.jpg"
+                                <Image width={400} height={400} src="/assets/home/images/img-loading.png" data-src="./files/img13.jpg"
                                      alt="About image" className="img__item img__item-1 lazy"/>
-                                <img src="/assets/home/images/img-loading.png" data-src="./files/img13.jpg"
+                                <Image width={400} height={400} src="/assets/home/images/img-loading.png" data-src="./files/img13.jpg"
                                      alt="About image" className="img__item img__item-2 lazy"/>
                             </div>
                         </div>

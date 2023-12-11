@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Index() {
     return (
         <>
@@ -5,7 +7,7 @@ export default function Index() {
                 <div className="container">
                     <div className="section-heading text-center">
                         <h5 className="ribbon ribbon-lg mb-2">Testimonials</h5>
-                        <h2 className="section__title">People's Feedback</h2>
+                        <h2 className="section__title">People(&apos;)s Feedback</h2>
                         <span className="section-divider"></span>
                     </div>
                 </div>
@@ -13,14 +15,19 @@ export default function Index() {
                     <div className="testimonial-carousel owl-action-styled owl-loaded owl-carousel">
                         <div className="owl-stage-outer owl-height" style={{height: '388.188px'}}>
                             <div className="owl-stage"
-                                 style={{transform: 'translate3d(-1792px, 0px, 0px)', transition: 'all 0s ease 0s; width: 7168px', pointerEvents: 'none'}}>
+                                 style={{
+                                     transform: 'translate3d(-1792px, 0px, 0px)',
+                                     transition: 'all 0s ease 0s; width: 7168px',
+                                     pointerEvents: 'none'
+                                 }}>
                                 <div className="owl-item mr-3 cloned" style={{width: '328.4px', marginRight: '30px'}}>
                                     <div className="card card-item">
                                         <div className="card-body">
                                             <div className="media media-card align-items-center pb-3">
                                                 <div className="media-img avatar-md">
-                                                    <img src="/assets/home/images/small-avatar-3.jpg"
-                                                         alt="Testimonial avatar" className="rounded-full"/>
+                                                    <Image width={400} height={400}
+                                                           src="/assets/home/images/small-avatar-3.jpg"
+                                                           alt="Testimonial avatar" className="rounded-full"/>
                                                 </div>
                                                 <div className="media-body">
                                                     <h5>Kevin Martin</h5>
@@ -49,8 +56,9 @@ export default function Index() {
                                         <div className="card-body">
                                             <div className="media media-card align-items-center pb-3">
                                                 <div className="media-img avatar-md">
-                                                    <img src="/assets/home/images/small-avatar-3.jpg"
-                                                         alt="Testimonial avatar" className="rounded-full"/>
+                                                    <Image width={400} height={400}
+                                                           src="/assets/home/images/small-avatar-3.jpg"
+                                                           alt="Testimonial avatar" className="rounded-full"/>
                                                 </div>
                                                 <div className="media-body">
                                                     <h5>Oliver Beddows</h5>
@@ -81,8 +89,9 @@ export default function Index() {
                                         <div className="card-body">
                                             <div className="media media-card align-items-center pb-3">
                                                 <div className="media-img avatar-md">
-                                                    <img src="/assets/home/images/small-avatar-3.jpg"
-                                                         alt="Testimonial avatar" className="rounded-full"/>
+                                                    <Image width={400} height={400}
+                                                           src="/assets/home/images/small-avatar-3.jpg"
+                                                           alt="Testimonial avatar" className="rounded-full"/>
                                                 </div>
                                                 <div className="media-body">
                                                     <h5>Jackob Hallac</h5>
@@ -112,8 +121,9 @@ export default function Index() {
                                         <div className="card-body">
                                             <div className="media media-card align-items-center pb-3">
                                                 <div className="media-img avatar-md">
-                                                    <img src="/assets/home/images/small-avatar-3.jpg"
-                                                         alt="Testimonial avatar" className="rounded-full"/>
+                                                    <Image width={400} height={400}
+                                                           src="/assets/home/images/small-avatar-3.jpg"
+                                                           alt="Testimonial avatar" className="rounded-full"/>
                                                 </div>
                                                 <div className="media-body">
                                                     <h5>Lubic Duble</h5>
@@ -130,7 +140,7 @@ export default function Index() {
                                                 </div>
                                             </div>
                                             <p className="card-text">
-                                                Thank you Aduca! You've renewed my passion for
+                                                Thank you Aduca! You have renewed my passion for
                                                 learning and my dream of becoming a web developer.
                                             </p>
                                         </div>
@@ -141,8 +151,9 @@ export default function Index() {
                                         <div className="card-body">
                                             <div className="media media-card align-items-center pb-3">
                                                 <div className="media-img avatar-md">
-                                                    <img src="/assets/home/images/small-avatar-3.jpg"
-                                                         alt="Testimonial avatar" className="rounded-full"/>
+                                                    <Image width={400} height={400}
+                                                           src="/assets/home/images/small-avatar-3.jpg"
+                                                           alt="Testimonial avatar" className="rounded-full"/>
                                                 </div>
                                                 <div className="media-body">
                                                     <h5>Daniel Ward</h5>
@@ -173,8 +184,9 @@ export default function Index() {
                                         <div className="card-body">
                                             <div className="media media-card align-items-center pb-3">
                                                 <div className="media-img avatar-md">
-                                                    <img src="/assets/home/images/small-avatar-3.jpg"
-                                                         alt="Testimonial avatar" className="rounded-full"/>
+                                                    <Image width={400} height={400}
+                                                           src="/assets/home/images/small-avatar-3.jpg"
+                                                           alt="Testimonial avatar" className="rounded-full"/>
                                                 </div>
                                                 <div className="media-body">
                                                     <h5>Kevin Martin</h5>
@@ -203,8 +215,9 @@ export default function Index() {
                                         <div className="card-body">
                                             <div className="media media-card align-items-center pb-3">
                                                 <div className="media-img avatar-md">
-                                                    <img src="/assets/home/images/small-avatar-3.jpg"
-                                                         alt="Testimonial avatar" className="rounded-full"/>
+                                                    <Image width={400} height={400}
+                                                           src="/assets/home/images/small-avatar-3.jpg"
+                                                           alt="Testimonial avatar" className="rounded-full"/>
                                                 </div>
                                                 <div className="media-body">
                                                     <h5>Oliver Beddows</h5>
@@ -221,7 +234,7 @@ export default function Index() {
                                                 </div>
                                             </div>
                                             <p className="card-text">
-                                                No matter what you want to learn, you’ll find an
+                                                No matter what you want to learn, you(&apos;)ll find an
                                                 amazing selection of courses here.
                                                 The instructors are so knowledgable while
                                                 being fun and interesting. Lorem ipsum dolor sit amet,
@@ -235,8 +248,9 @@ export default function Index() {
                                         <div className="card-body">
                                             <div className="media media-card align-items-center pb-3">
                                                 <div className="media-img avatar-md">
-                                                    <img src="/assets/home/images/small-avatar-3.jpg"
-                                                         alt="Testimonial avatar" className="rounded-full"/>
+                                                    <Image width={400} height={400}
+                                                           src="/assets/home/images/small-avatar-3.jpg"
+                                                           alt="Testimonial avatar" className="rounded-full"/>
                                                 </div>
                                                 <div className="media-body">
                                                     <h5>Jackob Hallac</h5>
@@ -266,8 +280,9 @@ export default function Index() {
                                         <div className="card-body">
                                             <div className="media media-card align-items-center pb-3">
                                                 <div className="media-img avatar-md">
-                                                    <img src="/assets/home/images/small-avatar-3.jpg"
-                                                         alt="Testimonial avatar" className="rounded-full"/>
+                                                    <Image width={400} height={400}
+                                                           src="/assets/home/images/small-avatar-3.jpg"
+                                                           alt="Testimonial avatar" className="rounded-full"/>
                                                 </div>
                                                 <div className="media-body">
                                                     <h5>Jackob Hallac</h5>
@@ -297,8 +312,9 @@ export default function Index() {
                                         <div className="card-body">
                                             <div className="media media-card align-items-center pb-3">
                                                 <div className="media-img avatar-md">
-                                                    <img src="/assets/home/images/small-avatar-3.jpg"
-                                                         alt="Testimonial avatar" className="rounded-full"/>
+                                                    <Image width={400} height={400}
+                                                           src="/assets/home/images/small-avatar-3.jpg"
+                                                           alt="Testimonial avatar" className="rounded-full"/>
                                                 </div>
                                                 <div className="media-body">
                                                     <h5>Jackob Hallac</h5>

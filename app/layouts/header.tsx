@@ -1,5 +1,5 @@
 // "use client";
-
+import Image from 'next/image'
 import Link from 'next/link'
 import {it} from "node:test";
 
@@ -73,7 +73,7 @@ export default async function Index({data}) {
                                             <div className="bs-searchbox">
                                                 <input type="search" className="form-control"
                                                        autoComplete="off" placeholder="Search"
-                                                       role="combobox" aria-label="Search"
+                                                       role="combobox" aria-expanded={true} aria-label="Search"
                                                        aria-controls="bs-select-1"
                                                        aria-autocomplete="list">
                                                 </input>
@@ -88,10 +88,10 @@ export default async function Index({data}) {
                                     <li className="d-flex align-items-center pr-3 mr-3 border-right border-right-gray">
                                         <i
                                             className="la la-sign-in mr-1"></i><Link
-                                        href="/user/login"> Login</Link>
+                                        href={'/user/login'}> Login</Link>
                                     </li>
                                     <li className="d-flex align-items-center"><i className="la la-user mr-1"></i><Link
-                                        href="/user/register">
+                                        href={'/user/register'}>
                                         Register</Link></li>
                                     `
                                 </ul>
@@ -109,7 +109,8 @@ export default async function Index({data}) {
                             <div className="col-lg-2">
                                 <div className="logo-box">
                                     <Link href="/" className="logo">
-                                        <img src="/assets/home/images/5.png" width={140} height={41} alt="logo"></img>
+                                        <Image src="/assets/home/images/5.png" width={140} height={41}
+                                               alt="logo"></Image>
                                     </Link>
                                     <div className="user-btn-action">
                                         <div
@@ -177,7 +178,8 @@ export default async function Index({data}) {
                                                                             Started
                                                                             <i className="la la-arrow-right icon ml-1"></i></a>
                                                                     </div>
-                                                                    <img
+                                                                    <Image
+                                                                        width={100} height={100}
                                                                         src="/assets/home/images/laptop.png"
                                                                         alt="menu banner image"
                                                                         className="w-100 h-100 rounded-rounded"/>
@@ -197,7 +199,7 @@ export default async function Index({data}) {
                                                     <i className="la la-angle-down fs-12"></i></a>
                                                 <ul className="cat-dropdown-menu">
                                                     {samanyaGyanDatas.data.map((item: SamanyaGyan, index: number) => (
-                                                        <li><a href="#">{item.title}</a></li>
+                                                        <li key={index}><a href="#">{item.title}</a></li>
                                                     ))}
 
                                                     <hr></hr>
@@ -210,7 +212,7 @@ export default async function Index({data}) {
                                                                 <a href="#">All</a>
                                                             </li>
                                                             {LoksewaDatas.data.map((item: Loksewa, index: number) => (
-                                                                <li>
+                                                                <li key={index}>
                                                                     <a href="#">{item.title}</a>
                                                                 </li>
                                                             ))}
@@ -235,10 +237,12 @@ export default async function Index({data}) {
                                                     <div className="top-popup-content lzd-download-content">
                                                         <div className="get-the-app-scope">
                                                             <div className="get-the-app">
-                                                                <div className="center-img-holder"><img
-                                                                    className="center-img"
-                                                                    src="/assets/home/images/home_get_mobile.png"
-                                                                    alt=""/>
+                                                                <div className="center-img-holder">
+                                                                    <Image
+                                                                        width={300} height={224}
+                                                                        className="center-img"
+                                                                        src="/assets/home/images/home_get_mobile.png"
+                                                                        alt=""/>
                                                                 </div>
                                                                 <div
                                                                     className="get-the-app-title text-center mt-3">Download
@@ -248,19 +252,17 @@ export default async function Index({data}) {
 
                                                                 <div className="get-the-app-promotion">
                                                                     <div className="get-the-app-lazada-qr-wrap">
-                                                                        <img className="get-the-app-lazada-qr"
-                                                                             src="/assets/home/images/qr_playstore.png"
-                                                                             alt=""/>
+                                                                        <Image width={100} height={100}
+                                                                               className="get-the-app-lazada-qr"
+                                                                               src="/assets/home/images/qr_playstore.png"
+                                                                               alt=""/>
                                                                     </div>
 
                                                                     <div className="promotion-text">
                                                                         <div className="app-stores">
-                                                                            <a href="//play.google.com/store/apps/details?id=com.daraz.android&amp;scm=1003.4.icms-zebra-100024132-6852845.OTHER_6502454496_7721167"
-                                                                               className="store-link">
-                                                                                <img width="auto" height="40"
-                                                                                     src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                                                                                     alt=""/>
-                                                                            </a>
+                                                                            <Image width={100} height={40}
+                                                                                   src="/assets/home/images/google_store.png"
+                                                                                   alt=""/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
