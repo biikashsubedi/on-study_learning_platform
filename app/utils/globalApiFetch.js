@@ -1,7 +1,7 @@
 const apiUrl = 'https://school.web.astrosoftware.com.np/api/v1/'
 const apiKey = 'p2yrhocea##)+87ob2#=$8&hs+@yh0dtr^nxeoq$tjug%se4fl'
 const samanyaGyanUrl = 'samanya-gyan'
-const lokSewaUrl = 'categories'
+const lokSewaUrl = 'categories/'
 const blogUrl = 'blog'
 const blogCategoryUrl = 'blog/categories'
 
@@ -91,7 +91,7 @@ export async function getBlogCategoryData() {
                 'Api-Key': apiKey,
             },
         });
-        if (!response.ok) {
+        if (!response.ok) {npm
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         return await response.json();
@@ -104,7 +104,7 @@ export async function getBlogCategoryData() {
 // Getting blog category data from api
 export async function getBlogChildCategoryDataBySlug(slug) {
     try {
-        const response = await fetch(`${apiUrl}${blogCategoryUrl}/${slug}`, {
+        const response = await fetch(`${apiUrl}${blogCategoryUrl}/${slug}/`, {
             headers: {
                 'Api-Key': apiKey,
             },

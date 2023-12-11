@@ -129,6 +129,13 @@ export default async function Index({data}) {
                             </div>
                             <div className="col-lg-10">
                                 <div className="menu-wrapper">
+                                    <nav className="main-menu ml-3">
+                                        <ul>
+                                            <li>
+                                                <Link href="/">Home</Link>
+                                            </li>
+                                        </ul>
+                                    </nav>
 
                                     <div className="menu-category">
                                         <nav className="main-menu">
@@ -137,17 +144,19 @@ export default async function Index({data}) {
                                                     <a href="/blog">Blogs <i
                                                         className="la la-angle-down fs-12"></i></a>
                                                     <div className="dropdown-menu-item mega-menu"
-                                                         style={{maxWidth: '110%', width:'95%'}}>
+                                                         style={{maxWidth: '110%', width: '95%'}}>
                                                         <ul className="row no-gutters">
                                                             {blogCategories.data.map((item: BlogCategory, index: number) => (
                                                                 <>
                                                                     <li className="col-lg-1.5">
-                                                                        <Link key={index} href={`/blog/type/${item.slug}`}
-                                                                           className="font-weight-bold">{item.title} </Link>
+                                                                        <Link key={index}
+                                                                              href={`/blog/type/${item.slug}`}
+                                                                              className="font-weight-bold">{item.title} </Link>
                                                                         <hr/>
                                                                         {// @ts-ignore
                                                                             item.child_categories.map((child: BlogCategory, index1: number) => (
-                                                                                <Link key={index1} href={`/blog/type/${item.slug}/${child.slug}`}>{child.title}
+                                                                                <Link key={index1}
+                                                                                      href={`/blog/type/${item.slug}/${child.slug}`}>{child.title}
                                                                                     <span className="ribbon">Hot</span></Link>
                                                                             ))}
                                                                     </li>
@@ -181,7 +190,7 @@ export default async function Index({data}) {
                                             </ul>
                                         </nav>
                                     </div>
-                                    <div className="menu-category">
+                                    <div className="menu-category mr-4">
                                         <ul>
                                             <li>
                                                 <a href="#">Categories
@@ -212,16 +221,7 @@ export default async function Index({data}) {
                                         </ul>
                                     </div>
 
-                                    <nav className="main-menu ml-3">
-                                        <ul>
-                                            <li>
-                                                <Link href="/">Home</Link>
-                                            </li>
-                                            <li>
-                                                <Link href="/blog">Blog</Link>
-                                            </li>
-                                        </ul>
-                                    </nav>
+
                                     <div className="nav-right-button">
                                         <div className="tooltip-container">
                                             <button className="button btn theme-btn d-none d-lg-inline-block"><i
@@ -237,7 +237,7 @@ export default async function Index({data}) {
                                                             <div className="get-the-app">
                                                                 <div className="center-img-holder"><img
                                                                     className="center-img"
-                                                                    src="//icms-image.slatic.net/images/ims-web/34d8863d-547e-4bd7-ba41-5fd7022366de.png"
+                                                                    src="/assets/home/images/home_get_mobile.png"
                                                                     alt=""/>
                                                                 </div>
                                                                 <div
@@ -249,7 +249,7 @@ export default async function Index({data}) {
                                                                 <div className="get-the-app-promotion">
                                                                     <div className="get-the-app-lazada-qr-wrap">
                                                                         <img className="get-the-app-lazada-qr"
-                                                                             src="//icms-image.slatic.net/images/ims-web/b1bacff9-3e2b-4fd5-9b7b-854f42048c23.png"
+                                                                             src="/assets/home/images/qr_playstore.png"
                                                                              alt=""/>
                                                                     </div>
 
