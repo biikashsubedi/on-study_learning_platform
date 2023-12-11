@@ -91,7 +91,7 @@ export async function getBlogCategoryData() {
                 'Api-Key': apiKey,
             },
         });
-        if (!response.ok) {npm
+        if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         return await response.json();
